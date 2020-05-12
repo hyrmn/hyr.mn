@@ -5,7 +5,7 @@ description: >-
   A cautionary tale of hubris in IT development
 tags:
   - DevLife
-  - posts
+  - blogentries
 ---
 
 Once upon a time, I started a job as a technical lead for a web development group. 

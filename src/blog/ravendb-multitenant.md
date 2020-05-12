@@ -7,7 +7,7 @@ tags:
   - CSharp
   - Code
   - RavenDb
-  - posts
+  - blogentries
 ---
 
 Note: Parts of this post are rather specific to RavenDB 2.5. While the overall lessons should guide you on any version, some specifics, such as pre-staging indexes, have better stories in newer versions (see, side-by-side indexes). We run on Azure virtual machines and some thoughts are specific to that platform as well.

@@ -7,7 +7,7 @@ tags:
   - CSharp
   - Code
   - RavenDb
-  - posts
+  - blogentries
 ---
 
 I'm working on a project where we're replacing db4o with RavenDB as an embedded data store. Now, normally, when you're integration testing and a database is involved, you mock the heck out of it because you don't want the hassle of cleaning up your test data and you don't want the slowness of hitting an actual database (sure, some of them are fast, and some not so much).

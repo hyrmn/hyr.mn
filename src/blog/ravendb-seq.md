@@ -7,7 +7,7 @@ tags:
   - CSharp
   - Code
   - RavenDb
-  - posts
+  - blogentries
 ---
 
 **The following applies to Raven 2.5.** It might apply to later versions as well...

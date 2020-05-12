@@ -3,12 +3,12 @@ layout: layout.njk
 title: Welcome to my blog
 ---
 
-{%- for post in collections.posts | reverse -%}
+{%- for entry in collections.blogentries | reverse -%}
 <section class="mt-6">
-    <h4 class="text-lg font-bold"><a href="{{ post.url }}">{{ post.data.title }}</a></h4>
-    <time value="{{ post.date }}" class="text-gray-600">{{ post.date | postDate }}</time>
+    <h4 class="text-lg font-bold"><a href="{{ entry.url }}">{{ entry.data.title }}</a></h4>
+    <time value="{{ entry.date }}" class="text-gray-600">{{ entry.date | entryDate }}</time>
     <div>
-    {{ post.data.description | safe }}
+    {{ entry.data.description | safe }}
     </div>
 </section>
 {%- endfor -%}

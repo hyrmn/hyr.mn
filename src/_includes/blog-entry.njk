@@ -1,0 +1,12 @@
+---
+layout: layout.njk
+pageClass: posts
+---
+
+<section class="blogentry">
+  <h1 class="text-lg font-bold">{{ title }}</h1>
+  <time value="{{ entry.date }}" class="text-gray-600">{{ date | entryDate }}</time>
+  <div class="mb-4 text-lg font-medium">
+    {{ content | safe }}
+  </div>
+</section>

@@ -1,5 +1,4 @@
 {
-    "layout": "layout.njk",
-    "outputPath":".",
-    "tags": ["posts"]
+    "layout": "blog-entry.njk",
+    "tags": ["blogentries"]
 }

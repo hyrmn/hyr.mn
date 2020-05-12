@@ -6,7 +6,7 @@ description: >-
 tags:
   - Go
   - Code
-  - posts
+  - blogentries
 ---
 
 When I first started learning to program, I had a blast writing little utilities and servers. I didn't realize it, but I've missed out on that feeling for too many years. I found it again. Thanks to my good friend [Pieter](https://twitter.com/pgermishuys), I've started making some progress on my backburner interest in [Go](https://golang.org/).

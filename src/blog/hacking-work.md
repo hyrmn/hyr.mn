@@ -5,7 +5,7 @@ description: >-
   I read a book so you don't have to
 tags:
   - BookReview
-  - posts
+  - blogentries
 ---
 
 Hacking Work: Breaking Stupid Rules for Smart Results

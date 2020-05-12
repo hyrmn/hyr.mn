@@ -6,7 +6,7 @@ description: >-
 tags:
   - Go
   - Code
-  - posts
+  - blogentries
 ---
 
 I've found a couple things that help when writing Go in Visual Studio Code. If you're using VS Code then you've probably been prompted to install some Go-related extensions already. But, there are a couple of settings that you might not have enabled. These settings will make things a little more enjoyable. At least they did for me

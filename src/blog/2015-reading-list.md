@@ -6,7 +6,7 @@ description: >-
 tags:
   - Reading
   - Personal
-  - posts
+  - blogentries
 ---
 
 *Note: The books are listed in order, in the month I've completed them. This list does not include any books I start but decide not to finish.* 

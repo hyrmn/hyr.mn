@@ -6,7 +6,7 @@ description: >-
 tags:
   - Go
   - Code
-  - posts
+  - blogentries
 ---
 
 I've been playing with Go and I thought it might be helpful to others to document a bit of what I've learned about Go on Windows. The [Go Docs](https://golang.org/doc/code.html) are very thorough but I'm putting things down so I can remember and maybe it will help someone else as well. **Just keep in mind, these are the notes of a Go novice**

@@ -44,6 +44,22 @@ a {
     @apply text-gray-900;
   }
 
+  .blogentry {
+    @apply text-gray-900;
+    @apply leading-normal; 
+    @apply break-words;
+  }
+  
+.blogentry h2 {
+    @apply mt-6;
+    @apply text-lg;
+    @apply font-bold;
+}
+ 
+.blogentry p {
+    @apply mt-6;
+}
+
 /* purgecss start ignore */
 @tailwind  components;
 /* purgecss end ignore */

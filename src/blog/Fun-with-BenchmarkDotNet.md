@@ -6,7 +6,7 @@ description: >-
 tags:
   - CSharp
   - Code
-  - posts
+  - blogentries
 ---
 
 My buddy [Pure.Krome](https://twitter.com/purekrome) stopped by the JabbR nerd chat with a question.

@@ -5,7 +5,7 @@ description: >-
   If you want to make pizza how I make pizza, well, this is how I make pizza
 tags:
   - Personal
-  - posts
+  - blogentries
 ---
 
 Homemade pizza is an indelible part of my childhood memories. Dad was in charge every Saturday night and I got to help. Back then, we made pizza in a hand-crank dough maker. Dad would also make his pizza sauce from scratch.

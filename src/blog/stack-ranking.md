@@ -5,7 +5,7 @@ description: >-
   Fun with corporate bullshit
 tags:
   - DevLife
-  - posts
+  - blogentries
 ---
 
 Stack ranking; Microsoft does it and a lot has been written about how... lackluster... the results can be.

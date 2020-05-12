@@ -7,7 +7,7 @@ tags:
   - CSharp
   - Code
   - Polly
-  - posts
+  - blogentries
 ---
 
 If you're just here for the code, you can grab it in [this Gist](https://gist.github.com/hyrmn/ce124e9b1f50dbf9d241390ebc8f6df3)

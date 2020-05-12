@@ -5,7 +5,7 @@ description: >-
   Fourteen years ago, we stood in front of a judge and made a promise to each other. 
 tags:
   - Personal
-  - posts
+  - blogentries
 ---
 
 There are things I didn't understand at the time. Like what it means to have a partner and co-conspirator in everything. Of course, I already knew how beautiful, smart, and caring you were. But to grow together; to be there for each other; to feel loved through all of life's ups and downs. That's something amazing.

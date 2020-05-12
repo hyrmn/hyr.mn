@@ -5,7 +5,7 @@ description: >-
   Reflections on the last year
 tags:
   - Personal
-  - posts
+  - blogentries
 ---
 
 I thought it would be useful, for myself, to reflect back on 2017. I haven't written anything since July 2016 so this will bleed into 2016 as well... or, at least the end of 2016.

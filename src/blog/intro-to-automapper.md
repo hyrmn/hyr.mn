@@ -6,7 +6,7 @@ description: >-
 tags:
   - CSharp
   - Code
-  - posts
+  - blogentries
 ---
 
 There's probably been a time where you needed to map properties from one object to another. Maybe you had a domain object that needed to be mapped to a DTO or some other view model thingy de jour. 

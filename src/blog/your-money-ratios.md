@@ -5,7 +5,7 @@ description: >-
   I read a book so you don't have to
 tags:
   - BookReview
-  - posts
+  - blogentries
 ---
 
 My review of *Your Money Ratios by Charles Farrell*
