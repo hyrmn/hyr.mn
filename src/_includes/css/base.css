@@ -1,10 +1,51 @@
 /* purgecss start ignore */
 @tailwind  base;
-@tailwind  components;
 /* purgecss end ignore */
 
-.btn { /* ... */ }
-.card { /* ... */ }
+a {
+    @apply border-b-2;
+    @apply text-blue-800;
+  }
+  a:hover,
+  a:focus {
+   @apply text-blue-500;
+   @apply border-orange-500;
+  } 
+  
+  code {
+    @apply bg-gray-200;
+    @apply text-sm;
+    @apply p-1;
+    @apply rounded;
+  }
+  
+  /*
+    Navigation links
+  */
+  .nav-link {
+    @apply block;
+    @apply font-semibold;
+    @apply px-3;
+    @apply border-b-2;
+    @apply border-gray-100;
+  }
+  .nav-link:hover {
+    @apply text-blue-500;
+    @apply border-b-2;
+    @apply border-orange-500;
+  }
 
+  .nav-link-social {
+    @apply inline-block;
+    @apply font-semibold;
+    @apply border-b-0;
+    @apply w-6;
+    @apply mr-4;
+    @apply text-gray-900;
+  }
+
+/* purgecss start ignore */
+@tailwind  components;
+/* purgecss end ignore */
 
 @tailwind utilities;
