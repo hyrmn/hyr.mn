@@ -2,7 +2,7 @@
 title: Exploring the Polly.Contrib.WaitAndRetry helpers
 date: 2019-09-18
 description: >-
-  Patterns and practices for wrapping code in wait-and-retry blocks when making remote calls.
+  Patterns and practices for wrapping .NET code in wait-and-retry blocks when making remote calls.
 tags:
   - CSharp
   - Code
