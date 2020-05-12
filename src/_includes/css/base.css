@@ -19,9 +19,6 @@ a {
     @apply rounded;
   }
   
-  /*
-    Navigation links
-  */
   .nav-link {
     @apply block;
     @apply font-semibold;
