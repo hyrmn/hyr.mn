@@ -1,7 +1,62 @@
 ---
 layout: layout.njk
-title: Welcome to my blog
+title: Writing about software and other curiosities
 ---
-{%- for post in collections.posts | reverse -%}
-    <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+
+<p class="mb-6 mt-6">Hi.</p>
+
+<p class="mb-6">My name is Ben Hyrman. I'm a software developer with a passion for shipping products.</p>
+
+<p class="mb-6">I love working with others. For me, development is a team sport. We go further when we go together.</p>
+
+<p class="mb-6">I <a href="/blog">write here</a>; mostly about what I'm learning or working on. I occasionally write about personal things as well.</p>
+
+<div class="w-full p-6 bg-gray-300">
+  <div class="border-b-2 border-gray-500 text-2xl text-blue-900 font-semibold">Spotlight</div>
+  <div class="text-lg text-gray-700">Some of my favorite posts</div>  
+  <div class="flex flex-wrap p-2 mt-6">
+    <div class="w-64 mr-6 rounded overflow-hidden shadow-lg bg-gray-100">
+        <img class="w-full" src="/img/card_kayakingonlakesuperior.jpg" alt="Kayaking on Lake Superior">
+        <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">14 Years</div>
+            <p class="text-gray-700 text-base">
+                Fourteen years ago, we stood in front of a judge and made a promise to each other. 
+            </p>
+        </div>
+        <div class="px-6 py-4">
+            <a href="/blog/14-years">Read &#8594;</a>
+        </div>
+    </div>
+
+    <div class="w-64 rounded overflow-hidden shadow-lg bg-gray-100">
+        <img class="w-full" src="/img/card_bandog.jpg" alt="Bandit the Dog">
+        <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">On Pets</div>
+            <p class="text-gray-700 text-base">
+                Reflections on 14 years with our furry companion
+            </p>
+        </div>
+        <div class="px-6 py-4">
+            <a href="/blog/on-pets">Read &#8594;</a>
+        </div>
+    </div>
+  </div>
+</div>
+
+<br />
+<div class="w-full p-6 bg-gray-300">
+  <div class="border-b-2 border-gray-500 text-2xl text-blue-900">RECENT</div>
+  <div class="text-lg text-gray-700">My newest posts</div>  
+
+  {%- for entry in collections.blogentries | reverse -%}
+  {%- if loop.index < 4 -%}
+<section class="mt-6">
+    <h4 class="text-lg font-bold"><a href="{{ entry.url }}">{{ entry.data.title }}</a></h4>
+    <time value="{{ entry.date }}" class="text-gray-600">{{ entry.date | entryDate }}</time>
+    <div>
+    {{ entry.data.description | safe }}
+    </div>
+</section>
+{%- endif -%}
 {%- endfor -%}
+</div>
