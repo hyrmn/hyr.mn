@@ -45,6 +45,7 @@ a {
     @apply text-gray-900;
     @apply leading-normal; 
     @apply break-words;
+    @apply mt-4;
   }
   
 .blogentry h2 {

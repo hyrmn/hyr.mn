@@ -4,8 +4,8 @@ pageClass: posts
 ---
 
 <section class="blogentry">
-  <h1 class="text-lg font-bold">{{ title }}</h1>
-  <time value="{{ entry.date }}" class="text-gray-600">{{ date | entryDate }}</time>
+  <h1 class="inline-block border-b-2 border-gray-200 text-xl text-gray-900 font-semibold">{{ title }}</h1>
+  <time value="{{ entry.date }}" class="block text-gray-600">{{ date | entryDate }}</time>
   <div class="mb-4 text-lg font-medium">
     {{ content | safe }}
   </div>
