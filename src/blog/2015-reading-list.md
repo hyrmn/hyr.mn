@@ -1,11 +1,12 @@
 ---
 title: 2015 Reading List
-date: "2015-12-31"
+date: 2015-12-31
 description: >-
   My reading list and notes for 2015
 tags:
   - Reading
   - Personal
+  - posts
 ---
 
 *Note: The books are listed in order, in the month I've completed them. This list does not include any books I start but decide not to finish.* 

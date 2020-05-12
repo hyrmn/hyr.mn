@@ -1,6 +1,6 @@
 ---
 title: Database designs - just add water
-date: "2008-07-19"
+date: 2008-07-19
 description: >-
   Great artists steal
 ---

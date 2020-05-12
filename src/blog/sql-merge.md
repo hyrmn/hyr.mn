@@ -1,10 +1,11 @@
 ---
 title: Basic MERGE with SQL Server
-date: "2015-02-02"
+date: 2015-02-02
 description: >-
   That lovely, funky SQL Server merge syntax
 tags:
   - SQL
+  - posts
 ---
 
 SQL Server 2008 introduced [Merge](https://msdn.microsoft.com/en-us/library/bb510625.aspx) which lets you do inserts, updates, and deletes on a target table based on a join to a source entity. While there are some [pitfalls to be aware of](http://www.mssqltips.com/sqlservertip/3074/use-caution-with-sql-servers-merge-statement/), it can be a nice alternative to the 'if not exists insert else update' code we'd otherwise write. 

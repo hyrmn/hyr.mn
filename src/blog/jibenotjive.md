@@ -1,6 +1,6 @@
 ---
 title: JibeNotJive.com
-date: "2013-08-19"
+date: 2013-08-19
 description: >-
   A stupid weeknight project
 ---

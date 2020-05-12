@@ -1,6 +1,6 @@
 ---
 title: JSON and the Headspring Labs Enumeration
-date: "2013-11-25"
+date: 2013-11-25
 description: >-
   Exploring a library for a better way to do enumerations in .NET
 ---

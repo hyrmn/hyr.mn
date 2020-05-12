@@ -1,6 +1,6 @@
 ---
 title: On Pets
-date: "2014-12-31"
+date: 2014-12-31
 description: >-
   Reflections on 14 years with our furry companion
 ---

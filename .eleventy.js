@@ -1,10 +1,14 @@
 const { DateTime }  = require('luxon');
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('postDate', dateObj => {
     return DateTime.fromJSDate(dateObj, {
       zone: 'utc'
     }).toFormat('LLLL d, y');
   });
+
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   // npm watch doesn't seem to like updating dist when src/_includes/css/base.css changes
   // so I'm setting postcss to publish to /src/css/base.css and then copying through to dist 

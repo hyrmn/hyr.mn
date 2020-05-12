@@ -24,7 +24,8 @@
   },
   "homepage": "https://github.com/hyrmn/hyr.mn#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0"
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1"
   },
   "dependencies": {
     "luxon": "^1.24.1",

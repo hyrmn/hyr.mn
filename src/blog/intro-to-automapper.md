@@ -1,11 +1,12 @@
 ---
 title: An introduction to AutoMapper
-date: "2013-08-29"
+date: 2013-08-29
 description: >-
   How to take everything from this object and put it in that object
 tags:
   - CSharp
   - Code
+  - posts
 ---
 
 There's probably been a time where you needed to map properties from one object to another. Maybe you had a domain object that needed to be mapped to a DTO or some other view model thingy de jour. 

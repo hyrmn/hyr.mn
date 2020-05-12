@@ -1,6 +1,6 @@
 ---
 title: aspConf Thoughts
-date: "2012-07-18"
+date: 2012-07-18
 description: >-
   My review of the community-inspired online .NET developer conference
 ---

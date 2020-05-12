@@ -1,12 +1,13 @@
 ---
 title: SQL Server Retries with Dapper and Polly
-date: "2019-09-03"
+date: 2019-09-03
 description: >-
   Retryable SQL Server exceptions, that lovely little library called Polly, and Dapper (or your favorite database access library)
 tags:
   - CSharp
   - Code
   - Polly
+  - posts
 ---
 
 If you're just here for the code, you can grab it in [this Gist](https://gist.github.com/hyrmn/ce124e9b1f50dbf9d241390ebc8f6df3)

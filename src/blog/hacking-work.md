@@ -1,10 +1,11 @@
 ---
 title: Hacking Work, a review
-date: "2015-01-14"
+date: 2015-01-14
 description: >-
   I read a book so you don't have to
 tags:
   - BookReview
+  - posts
 ---
 
 Hacking Work: Breaking Stupid Rules for Smart Results

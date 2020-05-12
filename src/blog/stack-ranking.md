@@ -1,10 +1,11 @@
 ---
 title: Fun with Stack Ranking
-date: "2013-08-22"
+date: 2013-08-22
 description: >-
   Fun with corporate bullshit
 tags:
   - DevLife
+  - posts
 ---
 
 Stack ranking; Microsoft does it and a lot has been written about how... lackluster... the results can be.

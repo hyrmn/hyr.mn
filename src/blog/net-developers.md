@@ -1,6 +1,6 @@
 ---
 title: Reflecting on .NET Developers
-date: "2016-06-16"
+date: 2016-06-16
 description: >-
   An observation on the current .NET drama (evergreen post)
 ---

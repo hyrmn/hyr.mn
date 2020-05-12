@@ -1,6 +1,6 @@
 ---
 title: Non-destructive integration tests with .NET 2.0
-date:  "2006-07-17"
+date:  2006-07-17
 description: >-
   How to do database integration tests with .NET 2.0
 ---

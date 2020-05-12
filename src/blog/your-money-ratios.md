@@ -1,10 +1,11 @@
 ---
 title: Your Money Ratios, a review
-date: "2014-11-03"
+date: 2014-11-03
 description: >-
   I read a book so you don't have to
 tags:
   - BookReview
+  - posts
 ---
 
 My review of *Your Money Ratios by Charles Farrell*

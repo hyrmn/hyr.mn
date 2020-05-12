@@ -1,12 +1,13 @@
 ---
 title: RavenDB Multitenant lessons learned
-date: "2016-06-28"
+date: 2016-06-28
 description: >-
   Lessons learned from life with RavenDB 2.5 in production
 tags:
   - CSharp
   - Code
   - RavenDb
+  - posts
 ---
 
 Note: Parts of this post are rather specific to RavenDB 2.5. While the overall lessons should guide you on any version, some specifics, such as pre-staging indexes, have better stories in newer versions (see, side-by-side indexes). We run on Azure virtual machines and some thoughts are specific to that platform as well.

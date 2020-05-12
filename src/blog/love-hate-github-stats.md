@@ -1,9 +1,10 @@
 ---
 title: Love Hate Relationship with GitHub Stats
-date: "2013-08-16"
+date: 2013-08-16
 description: >-
   GitHub's gamification of my commits; I hate it.
 ---
+
 I have a love-hate relationship with a tiny part of GitHub; the contribution graph.
 
 ![My commit activity](/img/commit_activity.png)

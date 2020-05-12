@@ -1,10 +1,11 @@
 ---
 title: The System
-date: "2012-07-25"
+date: 2012-07-25
 description: >-
   A cautionary tale of hubris in IT development
 tags:
   - DevLife
+  - posts
 ---
 
 Once upon a time, I started a job as a technical lead for a web development group. 

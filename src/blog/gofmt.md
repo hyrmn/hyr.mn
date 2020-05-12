@@ -1,11 +1,12 @@
 ---
 title: Formatting Go code with goimports
-date: "2020-01-20"
+date: 2020-01-20
 description: >-
   A formatting tip for Go in Visual Studio Code
 tags:
   - Go
   - Code
+  - posts
 ---
 
 I've found a couple things that help when writing Go in Visual Studio Code. If you're using VS Code then you've probably been prompted to install some Go-related extensions already. But, there are a couple of settings that you might not have enabled. These settings will make things a little more enjoyable. At least they did for me
@@ -37,7 +38,7 @@ func main() {
 }
 ```
 
-```posh
+```powershell
 > go run .
 .\main.go:5:2: imported and not used: "log"
  ```
@@ -48,7 +49,7 @@ The link above has steps to get running with some editors but VS Code is missing
 
 First, we need to install `goimports`. Open a command prompt and do that
 
-```posh
+```powershell
 > go get golang.org/x/tools/cmd/goimports
 ```
 

@@ -1,11 +1,12 @@
 ---
 title: Go 1.13 on Windows - File Structure
-date: "2020-01-15"
+date: 2020-01-15
 description: >-
   Some basics I have learned while learning Go
 tags:
   - Go
   - Code
+  - posts
 ---
 
 I've been playing with Go and I thought it might be helpful to others to document a bit of what I've learned about Go on Windows. The [Go Docs](https://golang.org/doc/code.html) are very thorough but I'm putting things down so I can remember and maybe it will help someone else as well. **Just keep in mind, these are the notes of a Go novice**
@@ -18,7 +19,7 @@ In addition to this, Go likes all of the Go code to live under one common root. 
 
 You can do this from a command prompt by running
 
-```posh
+```powershell
 setx GOPATH c:\code\go
 ```
 
@@ -38,13 +39,13 @@ On a new command prompt (so you can pick up the `GOPATH` settings), navigate to 
 
 Since we haven't done anything yet, it's going to be empty. However, Go will eventually put some top-level directories in here. Go expects all of the source code to live under `src` so make that directory now.
 
-```posh
+```powershell
 c:\code\go>md src
 ```
 
 Your structure will now look like 
 
-```posh
+```powershell
 c:\code\go\
 └── src
 ```
@@ -55,7 +56,7 @@ For "simplicity's sake" (well, simplicity for future you when you're pushing cod
 
 So, for me, I would run
 
-```posh
+```powershell
 c:\code\go>md src\github.com\hyrmn\hello
 ```
 
@@ -63,7 +64,7 @@ This will eventually get pushed up to GitHub to a new repository under my accoun
 
 Navigate to that new directory
 
-```posh
+```powershell
 C:\code\go>cd src\github.com\hyrmn\hello
 ```
 
@@ -73,7 +74,7 @@ At last, code time.
 
 First, let's tell Go that we want this to be a module.
 
-```posh
+```powershell
 c:\code\go\src\github.com\hyrmn\hello>go mod init github.com/hyrmn/hello
 ```
 
@@ -101,7 +102,7 @@ func main() {
 
 run it.
 
-```posh
+```powershell
 >go run .
 
 Hello, world.
@@ -115,7 +116,7 @@ But, there's more we can do
 
 We can `go install` our program.
 
-```posh
+```powershell
 >go install
 ```
 
@@ -125,7 +126,7 @@ When you run that command, Go builds your code and, if it succeeds, puts the exe
 
 Our full directory structure now looks like
 
-```posh
+```powershell
 .
 ├── bin
 │   └── hello.exe

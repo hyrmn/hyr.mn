@@ -1,6 +1,6 @@
 ---
 title: NHibernate config made simple
-date: "2006-07-20"
+date: 2006-07-20
 description: >-
   A basic NHibernate configuration, grab it and make it yours
 ---

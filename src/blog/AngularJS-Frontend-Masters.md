@@ -1,6 +1,6 @@
 ---
 title: AngularJS @ FrontEndMasters, my review
-date: "2013-09-06"
+date: 2013-09-06
 description: >-
   Wherein I reflect on some learnin' I did.
 ---

@@ -1,6 +1,6 @@
 ---
 title: Key Lookups are Bad
-date:  "2012-07-16"
+date:  2012-07-16
 description: >-
   On obsessing over database queries
 ---

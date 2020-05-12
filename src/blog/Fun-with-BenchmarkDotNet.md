@@ -1,11 +1,12 @@
 ---
 title: Measure Two Hundred Times, Tweak Twice
-date: "2019-07-25"
+date: 2019-07-25
 description: >-
   Let's profile some code! And see if we can figure out some great options for things that might matter
 tags:
   - CSharp
   - Code
+  - posts
 ---
 
 My buddy [Pure.Krome](https://twitter.com/purekrome) stopped by the JabbR nerd chat with a question.

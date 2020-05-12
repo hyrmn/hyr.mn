@@ -1,6 +1,6 @@
 ---
 title: AngularJS Controller on Directive
-date: "2013-09-15"
+date: 2013-09-15
 description: >-
   How to specify a dependencies for a controller inside a directive in AngularJS
 ---

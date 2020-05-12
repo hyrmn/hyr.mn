@@ -1,6 +1,6 @@
 ---
 title: Scheme Relative URLs
-date: "2012-07-24"
+date: 2012-07-24
 description: >-
   How to specify a link without a schema
 ---

@@ -1,6 +1,6 @@
 ---
 title: DotNetFringe 2016
-date: "2016-07-17"
+date: 2016-07-17
 description: >-
   Post-conference report on one of the best indie conferences around
 ---

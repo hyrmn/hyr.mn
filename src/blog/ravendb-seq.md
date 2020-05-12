@@ -1,12 +1,13 @@
 ---
 title: Logging from RavenDB to Seq
-date: "2015-01-15"
+date: 2015-01-15
 description: >-
   How to integrate RavenDB server logging into Seq so you can up your visibility game
 tags:
   - CSharp
   - Code
   - RavenDb
+  - posts
 ---
 
 **The following applies to Raven 2.5.** It might apply to later versions as well...

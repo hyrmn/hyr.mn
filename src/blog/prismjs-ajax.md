@@ -1,6 +1,6 @@
 ---
 title: Using Prism.js with AJAX content
-date: "2014-06-03"
+date: 2014-06-03
 description: >-
   Integrating PrismJS on a blog that doesn't do full page requests
 ---

@@ -1,6 +1,6 @@
 ---
 title: The Masked Puffin
-date: "2018-10-26"
+date: 2018-10-26
 description: >-
   The story of an office prank
 ---

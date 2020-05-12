@@ -1,6 +1,6 @@
 ---
 title: My .gitconfig
-date: "2013-08-13"
+date: 2013-08-13
 description: >-
   Tips, tricks, and stupid things you can do with Git
 ---

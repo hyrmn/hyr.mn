@@ -1,6 +1,6 @@
 ---
 title: Moving to Wyam
-date: "2016-06-15"
+date: 2016-06-15
 description: >-
   On playing with the best .NET static site generator 
 ---

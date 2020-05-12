@@ -1,6 +1,6 @@
 ---
 title: Programming Truths
-date: "2015-05-15"
+date: 2015-05-15
 description: >-
   Five important truths programmers must understand
 ---

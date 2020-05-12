@@ -1,6 +1,6 @@
 ---
 title: Database Tuning - Y U NO SORT IN APPLICATION
-date: "2012-07-19"
+date: 2012-07-19
 description: >-
   Part two on obsessing over database queries
 ---
