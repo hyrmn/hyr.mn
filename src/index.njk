@@ -3,41 +3,42 @@ layout: layout.njk
 title: Writing about software and other curiosities
 ---
 
-<p class="mb-6 mt-6 font-semibold">Hi.</p>
+<p class="mb-6 mt-6 text-2xl font-semibold">Hi.</p>
 
-<p class="mb-6">My name is Ben Hyrman. I'm a software developer with a passion for shipping products.</p>
+<p class="mb-6 text-xl">My name is Ben Hyrman. I'm a software developer with a passion for shipping products.</p>
 
-<p class="mb-6">I love working with others. For me, development is a team sport. We go further when we go together.</p>
+<p class="mb-6 text-xl">I love working with others. For me, development is a team sport. We go further when we go together.</p>
 
-<p class="mb-6">I <a href="/blog">write here</a>; mostly about what I'm learning or working on. I occasionally write about personal things as well.</p>
+<p class="mb-6 text-xl">I <a href="/blog">write here</a>; mostly about what I'm learning or working on. I occasionally write about personal things as well.</p>
 
-<div class="w-full p-6 bg-gray-300">
+<div class="w-full p-2 bg-gray-200 rounded">
   <div class="border-b-2 border-gray-500 text-2xl text-blue-900 font-semibold">Spotlight</div>
   <div class="text-lg text-gray-700">Some of my favorite posts</div>  
   
   <div class="flex flex-wrap p-2">
-    <div class="w-64 mr-6 mt-6 rounded overflow-hidden shadow-lg bg-gray-100">
+
+    <div class="relative w-64 mr-6 mt-6 rounded overflow-hidden shadow-lg bg-gray-100">
         <img class="w-full" src="/img/card_kayakingonlakesuperior.jpg" alt="Kayaking on Lake Superior">
-        <div class="px-6 py-4">
+        <div class="px-6 py-4 h-48">
             <div class="font-bold text-xl mb-2">14 Years</div>
             <p class="text-gray-700 text-base">
                 Fourteen years ago, we stood in front of a judge and made a promise to each other. 
             </p>
         </div>
-        <div class="px-6 py-4">
+        <div class="absolute right-0 bottom-0 inline-block px-6 py-4">
             <a href="/blog/14-years">Read &#8594;</a>
         </div>
     </div>
 
-    <div class="w-64 mt-6 rounded overflow-hidden shadow-lg bg-gray-100">
+    <div class="relative w-64 mt-6 rounded overflow-hidden shadow-lg bg-gray-100">
         <img class="w-full" src="/img/card_bandog.jpg" alt="Bandit the Dog">
-        <div class="px-6 py-4">
+        <div class="px-6 py-4 h-48">
             <div class="font-bold text-xl mb-2">On Pets</div>
             <p class="text-gray-700 text-base">
                 Reflections on 14 years with our furry companion
             </p>
         </div>
-        <div class="px-6 py-4">
+        <div class="absolute right-0 bottom-0 inline-block px-6 py-4">
             <a href="/blog/on-pets">Read &#8594;</a>
         </div>
     </div>
@@ -46,38 +47,47 @@ title: Writing about software and other curiosities
 
   <div class="flex flex-wrap p-2">
 
-    <div class="w-64 mr-6 mt-6 rounded overflow-hidden shadow-lg bg-gray-100">
-        <div class="px-6 py-4">
+    <div class="relative w-64 mr-6 mt-6 rounded overflow-hidden shadow-lg bg-gray-100">
+        <div class="flex items-center h-20 bg-orange-500">
+            <i class="fas fa-bezier-curve fa-3x mx-auto text-white"></i>
+        </div>
+        <div class="px-6 py-4 h-48">
             <div class="font-bold text-xl mb-2">Polly WaitAndRetry</div>
             <p class="text-gray-700 text-base">
                 Patterns and practices for wrapping .NET code in wait-and-retry blocks when making remote calls
             </p>
         </div>
-        <div class="px-6 py-4">
+        <div class="absolute right-0 bottom-0 inline-block px-6 py-4">
             <a href="/blog/Polly-wait-and-retry">Read &#8594;</a>
         </div>
     </div>
 
-    <div class="w-64 mr-6 mt-6 rounded overflow-hidden shadow-lg bg-gray-100">
-        <div class="px-6 py-4">
+    <div class="relative w-64 mr-6 mt-6 rounded overflow-hidden shadow-lg bg-gray-100">
+        <div class="flex items-center h-20 bg-blue-500">
+            <i class="fas fa-network-wired fa-3x mx-auto text-white"></i>
+        </div>
+        <div class="px-6 py-4 h-48">
             <div class="font-bold text-xl mb-2">The System</div>
             <p class="text-gray-700 text-base">
                 A cautionary tale of hubris in IT development
             </p>
         </div>
-        <div class="px-6 py-4">
+        <div class="absolute right-0 bottom-0 inline-block px-6 py-4">
             <a href="/blog/The-System">Read &#8594;</a>
         </div>
     </div>
 
-    <div class="w-64 mt-6 rounded overflow-hidden shadow-lg bg-gray-100">
-        <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">Fun with BenchmarkDotNet</div>
+    <div class="relative w-64 mt-6 rounded overflow-hidden shadow-lg bg-gray-100">
+        <div class="flex items-center h-20 bg-green-500">
+            <i class="fas fa-laptop-code fa-3x mx-auto text-white"></i>
+        </div>
+        <div class="px-6 py-4 h-48">
+            <div class="font-bold text-xl mb-2">BenchmarkDotNet</div>
             <p class="text-gray-700 text-base">
                 Let's profile some code! And see if we can figure out some great options for things that might matter
             </p>
         </div>
-        <div class="px-6 py-4">
+        <div class="absolute right-0 bottom-0 inline-block px-6 py-4">
             <a href="/blog/Fun-with-BenchmarkDotNet">Read &#8594;</a>
         </div>
     </div>
@@ -86,7 +96,7 @@ title: Writing about software and other curiosities
 </div>
 
 <br />
-<div class="w-full p-6 bg-gray-300">
+<div class="w-full p-2 bg-gray-200 rounded">
   <div class="border-b-2 border-gray-500 text-2xl text-blue-900">Recent</div>
   <div class="text-lg text-gray-700">My newest blog entries</div>  
 
