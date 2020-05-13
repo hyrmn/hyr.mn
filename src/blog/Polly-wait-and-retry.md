@@ -12,11 +12,11 @@ tags:
 
 If you're just here for the code, you can grab it in [this Gist](https://gist.github.com/hyrmn/a5227ed08923f3d14bab7736a9683c24)
 
-In a previous post, I covered a little bit of what you can do with Polly last time to [wait and retry SQL Server exceptions](/Dapper-and-Polly/). Today I want talk about one of the contrib libraries and how it can help bake some better practices into your retry policies.
+In a previous post, I covered a little bit of what you can do with Polly to [wait and retry SQL Server exceptions](/Dapper-and-Polly/). Today I want talk about one of the contrib libraries and how it can help standardize some better practices into your retry policies.
 
 In my code, I use Polly in several places to retry remote calls. Our software is deployed to a cloud provider and, while people should generally build for it anyway, hosting in a cloud environment really drives home that you need to bake resiliency in to any of your code that involves a network connection. That's not to say cloud hosting is unreliable; far from it. But, you can't control those small hiccups and blips that happen when underlying infrastructure is upgraded or rerouted.
 
-So, I might have a Polly retry policy for handling saves to our Raven document database
+So, I might have a Polly retry policy for handling saves to our RavenDB document database
 
 ```csharp
 var retryTimes = new List<TimeSpan>
@@ -47,13 +47,13 @@ What I've defined in my code above is a linear back-off. If my first try fails, 
 
 There are a few things to think about when deciding on a retry policy. 
 
-First, how long should we wait after the initial failure? In my use case (hosting in the cloud), it makes sense to retry failures immediately. A connection might fail because traffic is being killed and routed through a different firewall within the data center. In this case, trying again right away will (probably) succeed. 
+First, how long should we wait after the initial failure? In my use case (hosting in the cloud), it makes sense to retry failures immediately. A connection might fail because traffic is being killed and routed through a different network path within the data center. In this case, trying again right away will (probably) succeed. 
 
-Next, how long should we wait between retries? That depends on a balance of understanding the resource being called and the execution path of the caller. The code I posted above is in the execution path for a user's action on the web app. The last thing I want to do is force my users to wait. And, I'm calling a well-provisioned multi-node database cluster so I expect it to respond quickly outside of minor traffic blips.
+Next, how long should we wait between retries? That depends on a balance of understanding the resource being called and the execution path of the caller. The code I posted above is in the execution path for a user's action on our web-based application. The last thing I want to do is force my users to wait. And, I'm calling a well-provisioned multi-node database cluster so I expect it to respond quickly outside of minor traffic blips.
 
 Choosing how long to wait in a wait-and-retry loop is a balance of resources. You don't want to overwhelm a remote resource by retrying too quickly. You don't want to wait too long between retries, though; especially when a user is on the line and waiting. (user patience is the most valuable resource of all.)
 
-While my code works well, let's take a look at [Polly.Contrib.WaitAndRetry](https://github.com/Polly-Contrib/Polly.Contrib.WaitAndRetry/) and see if it can help with making things cleaner or at least clearer.
+While my code works well for my use case, let's take a look at [Polly.Contrib.WaitAndRetry](https://github.com/Polly-Contrib/Polly.Contrib.WaitAndRetry/) and see if it can help with making things cleaner or at least clearer.
 
 As the name alludes to, these are helper methods for wait-and-retry that are maintained outside of the official Polly library. There's so much you can do with Polly and they can't possibly bake everything into the core library. 
 
