@@ -4,11 +4,12 @@
 
 a {
     @apply border-b-2;
-    @apply text-blue-800;
+    @apply text-blue-400;
+    @apply border-blue-400;
   }
   a:hover,
   a:focus {
-   @apply text-blue-500;
+   @apply text-orange-700;
    @apply border-orange-500;
   } 
   
@@ -26,6 +27,12 @@ a {
     @apply border-b-2;
     @apply border-gray-100;
   }
+
+  .nav-link.active  {
+    @apply font-bold;
+    @apply border-blue-500;
+  }
+
   .nav-link:hover {
     @apply text-blue-500;
     @apply border-b-2;
@@ -41,11 +48,16 @@ a {
     @apply text-gray-900;
   }
 
+  .nav-link-social:hover {
+    @apply text-blue-500;
+  }
+
   .blogentry {
     @apply text-gray-900;
     @apply leading-normal; 
     @apply break-words;
     @apply mt-4;
+    @apply text-lg;
   }
   
 .blogentry h2 {

@@ -20,8 +20,12 @@
 
             <nav class="my-2 px-2 w-full overflow-hidden md:w-3/6 lg:w-1/3 xl:w-1/3 text-center md:text-left">
                 <ul>
-                    <li class="inline-block"><a class="nav-link" href="/">Home</a></li>
-                    <li class="inline-block"><a class="nav-link" href="/blog">Blog</a></li>
+                    <li class="inline-block">
+                      <a class="nav-link {% if page.url === '/' %} active {% endif %}" href="/">Home</a>
+                    </li>
+                    <li class="inline-block">
+                      <a class="nav-link {% if page.url === '/blog/' %} active {% endif %}" href="/blog/">Blog</a>
+                    </li>
                 </ul>
             </nav>
           
@@ -35,7 +39,10 @@
                 <a href="https://linkedin.com/in/benhyrman" title="LinkedIn" class="nav-link-social">
                     <i class="fab fa-linkedin fa-2x"></i>
                 </a>
-            </div>
+                <a href="https://www.flickr.com/photos/benhyr" title="Flickr" class="nav-link-social">
+                    <i class="fab fa-flickr fa-2x"></i>
+                </a>
+              </div>
           
           </div>
     </header>
@@ -48,8 +55,9 @@
 
     <footer class="container max-w-5xl mx-auto pt-5 border-dashed border-gray-500 border-t-2 mb-6">
         <ul>
-            <li>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+            <li>Writing and website design is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
             <li>&copy; 2006 - 2020 &mdash; Ben Hyrman
+            <li>Icons are copyright <a href="https://fontawesome.com">Font Awesome</a> and licensed under a <a rel="license" href="https://fontawesome.com/license/free">Creative Commons BY 4.0 International License</a>
         </ul>
     </footer>
     
