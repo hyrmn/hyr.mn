@@ -15,7 +15,7 @@ I wanted to take the idea of "do one thing well" to the extreme. And, since I'm 
 
 I mentioned composability a bit. Let's see what that entails. It means that this utility will output only the line count (so that it can be piped on to another command). And, it will need to accept, as input, either the output of another program (we might call this piped input). Or, it will need to be given a file location.
 
-Broadly, this means that it might be called like this
+This means that our little application might be called like this
 
 ```powershell
 > lc "path/to/your/file.txt"
