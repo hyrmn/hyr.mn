@@ -1,0 +1,50 @@
+---
+layout: layout.njk
+title: Projects for your amusement and consideration
+---
+
+<p class="mb-6 mt-6 text-xl">My two favorite ways to learn are to make little toy apps and write. Below are some of my tinkerings where I've brought those together. Hopefully they'll be useful to you in some fashion as well.
+</p>
+<p class="mb-6 mt-6 text-xl">
+Ideally, they're small. Likely, they exist I wanted to learn something or illustrate a concept on its own. You may laugh at why I even bothered to make them. But, I had fun.
+</p>
+
+<div class="w-full p-2 bg-gray-200 rounded">
+  <div class="border-b-2 border-gray-500 text-2xl text-blue-900 font-semibold">Projects</div>
+
+    <div class="w-full mt-6 rounded overflow-hidden shadow-lg bg-gray-100">
+        <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Line Counter (Go)</div>
+            <p class="text-gray-700 text-base">
+                This utility was motivated by my desire to learn Go. I was reflecting on <a href="https://en.wikipedia.org/wiki/Unix_philosophy">The Unix Philosophy</a> and it struck me that `wc` (a command-line utility that can count words, characters, and lines)
+                would be interesting to replace. But, unlike `wc`, I would only do one thing. Count lines. In writing my own utility, I could learn how to read input from the command line and also how to read a file in Go.
+            </p>
+            <ul class="mt-6">
+                <li><a href="https://github.com/hyrmn/lc">Grab the code on GitHub</a>
+                <li><a href="/blog/counting-flowers-on-the-wall">Read my blog post about the project</a>
+            </ul>
+        </div>
+    </div>
+  
+    <div class="w-full mt-6 rounded overflow-hidden shadow-lg bg-gray-100">
+        <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Line Counter (.NET Core)</div>
+            <p class="text-gray-700 text-base mb-6">
+                Right around the time that I finished my <a href="https://github.com/hyrmn/lc">Go-based line counter</a>, a Twitter storm solidified with strong opinions on how ill-suited .NET was for system utilities. That it
+                was slow, etc. 
+            </p>
+            <p class="text-gray-700 text-base mb-6">
+                While much of my daily work revolved around .NET Full Framework, I wanted to learn more about .NET Core (the cross-platform, leaner, meaner, newer scion in Microsoft). What better way to learn than, well, re-writing
+                something that would give me a comparison. 
+            </p>
+            <p class="text-gray-700 text-base">
+                The most surprising thing to me is how similar the code looks between the two. Of course, that stands to reason as I wrote them both. But, I tried to be idiomatic with each language. (and, spoiler, they were virtually tied on speed)
+            </p>
+            <ul class="mt-6">
+                <li><a href="https://github.com/hyrmn/nlc">Grab the code on GitHub</a>
+                <li><a href="/blog/counting-flowers-on-the-wall">Read my blog post about the project</a>
+            </ul>
+        </div>
+    </div>
+
+</div>
