@@ -9,10 +9,11 @@ tags:
   - blogentries
 ---
 
-I want to write a small utility with Go. It will count lines in files. There's already a Unix command that does this, `wc` (word count). Or, technically, `wc -l`. It takes in a `-l` flag if you want to count lines.
+I was thinking the other day about <a href="https://en.wikipedia.org/wiki/Unix_philosophy">The Unix Philosophy</a>. Broadly, you can get a lot of power from small command line utilities that do one thing well and can be chained, or composed, into more powerful use cases. For example, there's a command called `wc` (word count). It, well, unsurprisingly, counts words. But, you can also have it count lines if you pass in a flag `wc -l`.
 
-But, in keeping with <a href="https://en.wikipedia.org/wiki/Unix_philosophy">The Unix Philosophy</a>, my utility will only do one thing. Count lines. It will output only the line count (so that it can be piped on to another command).
-And, it will need to accept either piped input _or_ it will need to be given a file location.
+I wanted to take the idea of "do one thing well" to the extreme. And, since I'm learning Go, I thought a line count utility would be a fitting exercise. In building this, we'll be able to learn how to read input from another program to support composability; we'll learn a bit about command line arguments; and we'll learn about reading files.
+
+I mentioned composability a bit. Let's see what that entails. It means that this utility will output only the line count (so that it can be piped on to another command). And, it will need to accept, as input, either the output of another program (we might call this piped input). Or, it will need to be given a file location.
 
 Broadly, this means that it might be called like this
 
@@ -184,11 +185,37 @@ if err == io.EOF {
 return count, err
 ```
 
+## An Alternative Way to Read
+
+Calling `bytes.Count(buffer[:read], target)` is a very specific choice that I can make for this application. However, it might not always work for us. Suppose we were looking for a slightly more complicated pattern. Go has a way for us to do that. `bytes.IndexByte` will return the index position of the first occurance of a byte in a byte array. If no occurance is found, then a `-1` is returned.
+
+So, while it's more complicated, we can look for our `\n` character, and then look at the next slice of the array after that character, and then look at the next slice... continuing on until we're out of things to look at. Then we'd move on to the next chunk of file.
+
+In that implementation, we would replace `count += bytes.Count(buffer[:read], target)` with the following
+
+```go
+...
+const target byte = '\n'
+...
+
+	var position int
+	for {
+		idxOf := bytes.IndexByte(buffer[position:read], target)
+		if idxOf == -1 {
+			break
+		}
+
+		count++
+		position += idxOf + 1
+	}
+```
+
+
 ## Wrapping Up?
 
 I haven't demonstrated any tests for this program. I'll leave you to <a href="https://github.com/hyrmn/lc/blob/master/pkg/lc/lc_test.go">review them</a> at your leisure. Or, wait for the next exciting installment.
 
-I've <a href="/blog/go-structure-windows/">previously covered</a> how I set Go up locally and add `%GOPATH%\bin` to my path. So, from within the `lc` project directory, I can run `go install` and have a shiny new command line utility to use.
+I've <a href="/blog/go-structure-windows/">previously covered</a> how I set Go up locally and added `%GOPATH%\bin` to my path. So, from within the `lc` project directory, I can run `go install` and have a shiny new command line utility to use.
 
 Honestly, thinking up bespoke little utilities has been a lot of fun. And, once you unlock the power of chaining them together, you'll think of many new use cases. Just keep the Unix philosophy in mind.
 
