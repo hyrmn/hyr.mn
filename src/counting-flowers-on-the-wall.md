@@ -1,4 +1,5 @@
 ---
+layout: blog-entry.njk
 title: Counting lines with Go
 date: 2020-05-13
 description: >-
@@ -215,7 +216,7 @@ const target byte = '\n'
 
 I haven't demonstrated any tests for this program. I'll leave you to <a href="https://github.com/hyrmn/lc/blob/master/pkg/lc/lc_test.go">review them</a> at your leisure. Or, wait for the next exciting installment.
 
-I've <a href="/blog/go-structure-windows/">previously covered</a> how I set Go up locally and added `%GOPATH%\bin` to my path. So, from within the `lc` project directory, I can run `go install` and have a shiny new command line utility to use.
+I've <a href="/go-structure-windows/">previously covered</a> how I set Go up locally and added `%GOPATH%\bin` to my path. So, from within the `lc` project directory, I can run `go install` and have a shiny new command line utility to use.
 
 Honestly, thinking up bespoke little utilities has been a lot of fun. And, once you unlock the power of chaining them together, you'll think of many new use cases. Just keep the Unix philosophy in mind.
 

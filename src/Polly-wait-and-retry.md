@@ -1,5 +1,4 @@
 ---
-layout: blog-entry.njk
 title: Exploring the Polly.Contrib.WaitAndRetry helpers
 date: 2019-09-18
 description: >-

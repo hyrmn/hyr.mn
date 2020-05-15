@@ -1,14 +1,19 @@
 ---
 layout: layout.njk
-title: Welcome to my blog
+title: Writing about software and other curiosities
 ---
 
+<div class="w-full p-2 bg-gray-200 rounded">
+  <div class="border-b-2 border-gray-500 text-2xl text-blue-900 font-semibold">Spotlight</div>
+  <div class="text-lg text-gray-700">Some of my favorite posts</div>  
+
 {%- for entry in collections.blogentries | reverse -%}
-<section class="mt-6">
-    <h4 class="text-lg font-bold"><a href="{{ entry.url }}">{{ entry.data.title }}</a></h4>
-    <time value="{{ entry.date }}" class="text-gray-600">{{ entry.date | entryDate }}</time>
-    <div>
-    {{ entry.data.description | safe }}
-    </div>
-</section>
+    <section class="mt-6">
+        <h4 class="text-lg font-bold"><a href="{{ entry.url }}">{{ entry.data.title }}</a></h4>
+        <time value="{{ entry.date }}" class="text-gray-600">{{ entry.date | entryDate }}</time>
+        <div>
+        {{ entry.data.description | safe }}
+        </div>
+    </section>
 {%- endfor -%}
+</div>

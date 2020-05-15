@@ -3,10 +3,12 @@ layout: layout.njk
 pageClass: posts
 ---
 
-<section class="blogentry">
-  <h1 class="inline-block border-b-2 border-gray-200 text-xl text-gray-900 font-semibold">{{ title }}</h1>
-  <time value="{{ entry.date }}" class="block text-gray-600">{{ date | entryDate }}</time>
+<article class="blogentry">
+  <h1 class="border-b-2 border-gray-500 text-2xl text-blue-900 font-semibold">{{ title }}</h1>
+  <time value="{{ entry.date }}" class="block text-lg text-gray-700">{{ date | entryDate }}</time>
+
+  
   <div class="mb-4 text-lg font-medium">
     {{ content | safe }}
   </div>
-</section>
+</article>
