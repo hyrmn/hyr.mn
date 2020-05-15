@@ -1,5 +1,4 @@
 ---
-layout: blog-entry.njk
 title: Counting lines with Go
 date: 2020-05-13
 description: >-

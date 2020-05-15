@@ -1,0 +1,4 @@
+{
+    "layout": "blog-entry.njk",
+    "permalink": "/{{ page.fileSlug | slug }}/index.html"
+}
