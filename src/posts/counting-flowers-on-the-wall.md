@@ -210,6 +210,27 @@ const target byte = '\n'
 	}
 ```
 
+## Is it Fast?
+
+I am only concerned with if this is _comparatively_ fast when measured against `wc`. Getting true benchmarking numbers are outside of the scope of my efforts here. I've run both programs several times which ensures the operating system and my storage have both done any caching they plan to do.
+
+Using `time` (Unix timing utility) `wc` on my machine (a midrange dev laptop with an NVMe SSD drive) to parse a 1.6GB text file of lorem ipsum text, I get the following averages after an initial warmup call:
+
+```
+real    0m0.822s
+user    0m0.156s
+sys     0m0.655s
+```
+
+Using `lc` to parse the same file, I get the following averages after an initial warmup call:
+
+```
+real    0m0.625s
+user    0m0.015s
+sys     0m0.015s
+```
+
+So, I'm happy with how this experiment went.
 
 ## Wrapping Up?
 
