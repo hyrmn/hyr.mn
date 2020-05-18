@@ -203,6 +203,7 @@ Looks like a tie to me (and they're both faster than `wc`).
 
 Of course, there are other considerations. The compiled Go version on Windows is 2.8mb. Respectable. And, easy enough to compile to multiple targets and distribute. Meanwhile, the .NET version... if you have the framework installed already... is a svelte 170kb (yes, kilobytes). You _can_ choose to compile the .NET version standalone. I'll leave that as an exercise for the reader. (spoiler, it results in quite a bit more to bring along for a deployment).
 
+
 ## Wrapping Up
 
 I haven't demonstrated any tests for this program. I'll leave you to <a href="https://github.com/hyrmn/nlc/blob/master/nlc.tests/LineCounterTests.cs">review them</a> at your leisure.
