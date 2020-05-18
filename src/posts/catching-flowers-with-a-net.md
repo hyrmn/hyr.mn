@@ -79,7 +79,7 @@ namespace nlc
 }
 ```
 
-.NET gives us different kinds of [Stream](https://docs.microsoft.com/en-us/dotnet/api/system.io.stream?view=netcore-3.1)s for reading and writing a sequence of bytes. Or, broadly, we get different classes with a shared abstraction to do things like... read and write to files, read and write to memory, the network, etc. 
+.NET gives us different kinds of [Streams](https://docs.microsoft.com/en-us/dotnet/api/system.io.stream?view=netcore-3.1) for reading and writing a sequence of bytes. Or, broadly, we get different classes with a shared abstraction to do things like... read and write to files, read and write to memory, the network, etc. 
 
 So, here we're opening a [FileStream](https://docs.microsoft.com/en-us/dotnet/api/system.io.filestream?view=netcore-3.1) in read-only mode. We're specifying a buffer size, or the number of bytes we expect to read at a time, and we're providing a hint that we'll be processing the file sequentially. This gives the runtime a chance to work with the operating system to optimize for read performance.
 
