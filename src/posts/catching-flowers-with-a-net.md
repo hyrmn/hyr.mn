@@ -11,9 +11,10 @@ tags:
 
 This is, I guess, part 2 in a series. 
 
-I previously wrote about [writing a utility in Go](/blog/counting-flowers-on-the-wall/) to count carriage returns (or newline characters) in a file. I decided that I wanted to do the same in C# on [.NET Core](https://docs.microsoft.com/en-us/dotnet/core/about). 
+I previously wrote about [writing a utility in Go](/counting-flowers-on-the-wall/) to count carriage returns (or newline characters) in a file. I decided that I wanted to do the same in C# on [.NET Core](https://docs.microsoft.com/en-us/dotnet/core/about). 
 
 Anyway, let's take a look at some of the neat new goodies in .NET and see what a command line utility to parse a file might look like. If you want to just see the code, it's <a href="https://github.com/hyrmn/nlc">on GitHub</a>.
+
 
 ## Implementation Recap
 
@@ -39,6 +40,7 @@ In either case, the count of carriage returns (`\n`) in the file will be printed
 > nlc "path/to/your/file.txt"
 109
 ```
+
 
 ## Handling a file argument
 
@@ -83,6 +85,7 @@ namespace nlc
 
 So, here we're opening a [FileStream](https://docs.microsoft.com/en-us/dotnet/api/system.io.filestream?view=netcore-3.1) in read-only mode. We're specifying a buffer size, or the number of bytes we expect to read at a time, and we're providing a hint that we'll be processing the file sequentially. This gives the runtime a chance to work with the operating system to optimize for read performance.
 
+
 ## Handling piped input
 
 Next, we should handle piped input. In my [Go line counting article](/counting-flowers-on-the-wall/), I covered file descriptors and how `stdin` can be treated as just another file descriptor. Well, in .NET, the abstraction gets kicked up a notch and, you may have guessed already, we can treat it as a stream!
@@ -95,6 +98,7 @@ if (Console.IsInputRedirected)
   count = counter.CountLines(Console.OpenStandardInput());
 }
 ```
+
 
 ## Count Them Lines
 
@@ -178,6 +182,7 @@ if err == io.EOF {
 In Go, we expect to get back _either_ the number of bytes read _or_ an error. The error is our signal that the end of file has been reached.
 
 I think this type of thinking is probably one of the harder switches for someone accustomed to writing C# or Java code when they first start with Go. In those languages, we're told that raising exceptions is expensive and should truly only be used for exceptional cases (reaching the end of a file is a normal control flow and certainly not exceptional). However, in Go, raising or returning an error is idiomatic and not costly.
+
 
 ## Is .NET as Fast as Go?
 
