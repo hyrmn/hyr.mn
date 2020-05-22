@@ -38,6 +38,7 @@ In either case, the count of carriage returns (`\n`) in the file will be printed
 
 If you want to just see the code, it's <a href="https://github.com/hyrmn/lc">available on GitHub</a>.
 
+
 ## Implementation Considerations
 
 There are some counting assumptions that I made. I had originally chosen to have this match my editor's line count. That is, if Visual Studio Code shows `x` lines then my logic would also show `x` lines. However, I've chosen to follow the behavior of `wc -l`. I count carriage returns (`\n`). If a file does not end with a carriage return then the last line will not be counted.
@@ -45,6 +46,7 @@ There are some counting assumptions that I made. I had originally chosen to have
 While I'm not sure how I feel about this behavior, it is consistent with other tooling. A trailing carriage return is required to get an accurate count. Changing this is an exercise left to the reader.
 
 Also, I think I might want to reuse the line-counting logic in other applications. So, I'm going to separate the command-line interface from the code that understands how to read through a stream and count returns.
+
 
 ## Handling a file argument
 
@@ -68,6 +70,7 @@ countLines(file)
 ```
 
 I'm opening a file for read-only access, and requiring that the file have read permissions set for the user, group, and other. We'll get a file descriptor back from the call to `os.OpenFile`. You can think of a file descriptor as a small reference that we'll keep around so know know where to read data from later. And, to clean up after ourselves, we'll close the file when we're done reading. We can do with with the call to `defer file.Close()`
+
 
 ## Handling piped input
 
@@ -112,6 +115,7 @@ func countLines(r io.Reader) {
 	fmt.Println(count)
 }
 ```
+
 
 ## Count Them Lines
 
@@ -185,6 +189,7 @@ if err == io.EOF {
 return count, err
 ```
 
+
 ## An Alternative Way to Read
 
 Calling `bytes.Count(buffer[:read], target)` is a very specific choice that I can make for this application. However, it might not always work for us. Suppose we were looking for a slightly more complicated pattern. Go has a way for us to do that. `bytes.IndexByte` will return the index position of the first occurance of a byte in a byte array. If no occurance is found, then a `-1` is returned.
@@ -210,6 +215,7 @@ const target byte = '\n'
 	}
 ```
 
+
 ## Is it Fast?
 
 I am only concerned with if this is _comparatively_ fast when measured against `wc`. Getting true benchmarking numbers are outside of the scope of my efforts here. I've run both programs several times which ensures the operating system and my storage have both done any caching they plan to do.
@@ -231,6 +237,7 @@ sys     0m0.015s
 ```
 
 So, I'm happy with how this experiment went.
+
 
 ## Wrapping Up?
 
