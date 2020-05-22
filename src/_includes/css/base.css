@@ -2,6 +2,7 @@
 @tailwind  base;
 /* purgecss end ignore */
 
+/* purgecss start ignore */
 a {
     @apply border-b-2;
     @apply text-blue-400;
@@ -76,6 +77,7 @@ a {
 .blogentry p {
     @apply mt-6;
 }
+/* purgecss end ignore */
 
 /* purgecss start ignore */
 @tailwind  components;

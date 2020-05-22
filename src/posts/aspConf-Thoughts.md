@@ -3,6 +3,8 @@ title: aspConf Thoughts
 date: 2012-07-18
 description: >-
   My review of the community-inspired online .NET developer conference
+tags:
+ - blogentries
 ---
 
 aspConf was, overall, pretty damn outstanding. Even better, the presenters recorded their sessions and [they're rapidly being made available](http://channel9.msdn.com/Events/aspConf/aspConf) so you can watch anything you missed and rewatch anything you didn't quite grok the first time.
