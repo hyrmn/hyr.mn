@@ -96,7 +96,7 @@ Since this is not an in-depth AutoMapper article, I've chosen to keep the config
 
 With AutoMapper, `cfg.CreateMap<User, UserSummary>()` creates a mapping _from_ `User` _to_ `UserSummary`. This automatically works with scenarios like above where I am mapping a **collection** of `User`s to a **collection** of `UserSummary`s. Note, however, that the mapping is one-way only. If you want to map from `UserSummary` back to `User` then you would need to add the inverse as well by adding `cfg.CreateMap<UserSummary, User>()`.
 
-AutoMapper is pretty powerful and we use it extensively at my employer. However, there's no free lunch and that includes mapping tools in .NET. If we change `Name` to `FullName` on our `User` domain object, but then **forget** to rename the same property on our model, we won't get a compilation error. Rather, AutoMapper will happily give us an object with a mapped `Id` and a null `Name`. 
+AutoMapper is pretty powerful and we use it extensively at my employer. However, there's no perfect solution and that includes mapping tools in .NET. If we change `Name` to `FullName` on our `User` domain object, but then **forget** to rename the same property on our model, we won't get a compilation error. Rather, AutoMapper will happily give us an object with a mapped `Id` and a null `Name`. 
 
 Note, AutoMapper has a method that you can call after you set up the configuration to ensure that all properites on the target mapping are accounted for. You can perform this check by calling `config.AssertConfigurationIsValid();`. But, it's still a runtime check. So, unfortunately, we lose the benefits of our compiler.
 
@@ -123,7 +123,7 @@ public class UserSummary
 }
 ```
 
-I've added a static method that takes in a `User` and gives us back a super-shiny `UserSummary`. I like this because there is a clear home for the mapping logic; if I rename a property on my domain object then my IDE will update the mapping for me; and if I search for references on my UserSummary, I'm guided here.
+I've added a static method that takes in a `User` and gives us back a `UserSummary`. I like this because there is a clear home for the mapping logic; if I rename a property on my domain object then my IDE will update the mapping for me; and if I search for references on my UserSummary, I'm guided here.
 
 In action, the call to map looks like this
 
@@ -190,9 +190,9 @@ public void MapUserWithExplicitCast()
 }
 ```
 
-If you're familiar with LINQ, you're probably wondering why you can't call `users.Cast<UserSummary>()`. The reason is because the explicit cast that we introduced is bound at the [call sites](https://en.wikipedia.org/wiki/Call_site) at compile-time (that is, the code to do the conversion is written at the time you build your app) but the LINQ `.Cast<>()` method is a generic cast performed at runtime and, as such, misses out on that compilation switcharoo.
+If you're familiar with LINQ, you're probably wondering why you can't call `users.Cast<UserSummary>()`. The reason is because the explicit cast that we introduced is bound at the [call sites](https://en.wikipedia.org/wiki/Call_site) at compile-time (that is, the code to do the conversion is written at the time you build your app) but the LINQ `.Cast<>()` method is a generic cast performed at runtime and, as such, misses out on that compilation switch-out.
 
-Would I do this in production code? Not for this kind of use case... no. It forces your caller to know that they can (and should), use an explicit cast to transform the data. Compare this to the `UserSummary.MapFrom()` method where we get intellisense in our IDE and a clear expectation of what to pass. 
+Would I do this in production code? Not for this kind of use case... no. It forces your caller to know that they can (and should) use an explicit cast to transform the data. Compare this to the `UserSummary.MapFrom()` method where we get intellisense in our IDE and a clear expectation of what to pass. 
 
 That said, we've gotta have some fun in the blog. Plus, there are some valid use cases for it, such as creating a strongly typed ID value object that can pretend to be a GUID when needed. This is worth exploring if you're pursuing a Domain Driven Design.
 
@@ -236,7 +236,7 @@ We've had to change up our LINQ `.Select()` statement quite a bit. LINQ uses thi
 
 Again, I would not actually use this in production code although, honestly, to me the Select statement reads fairly nice. 
 
-The reason that I don't like the implicit cast here is that it hides the complexity in a way that I'd rather keep centered. And, as with our explicit cast, it forces the caller to understand too much of your internal implementation. But, it's useful to understand explicit and implicit type conversions as they can come in handy.
+The reason that I don't like the implicit cast here is that it hides the complexity in a way that I'd rather keep centered. And, as with our explicit cast, it forces the caller to understand too much of your internal implementation. But, it's useful to understand explicit and implicit type conversions so you can know when, and when not, to use them.
 
 ## Wrapping up
 
