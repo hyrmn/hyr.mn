@@ -194,7 +194,7 @@ If you're familiar with LINQ, you're probably wondering why you can't call `user
 
 Would I do this in production code? Not for this kind of use case... no. It forces your caller to know that they can (and should), use an explicit cast to transform the data. Compare this to the `UserSummary.MapFrom()` method where we get intellisense in our IDE and a clear expectation of what to pass. 
 
-That said, we've gotta have some fun in the blog. Plus, there are some valid use cases for it, such as creating a strongly typed ID value object if you're into Domain Driven Design.
+That said, we've gotta have some fun in the blog. Plus, there are some valid use cases for it, such as creating a strongly typed ID value object that can pretend to be a GUID when needed. This is worth exploring if you're pursuing a Domain Driven Design.
 
 ### Implicit type conversion
 
