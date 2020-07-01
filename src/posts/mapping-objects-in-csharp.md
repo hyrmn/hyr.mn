@@ -13,7 +13,7 @@ A while ago, I wrote about [using AutoMapper to copy data between objects](/intr
 
 It can be useful to reshape our data by copying it to a more specific structure that's tailored to the current use case. For example, we want to return a limited amount of data in response to an API request rather than our full domain object. Or, maybe we want to let the user send us changes and we want to protect against [overposting](https://www.hanselman.com/blog/ASPNETOverpostingMassAssignmentModelBindingSecurity.aspx).
 
-Let's explore some options in C# and learn something about two powerful `operator`s along the way.
+Let's explore some options in C# and learn something about two potentially useful C# `operator` type converters along the way.
 
 To set the scene, I have a `User` that holds the state for some login and profile information on my to-be-announced e-commerce platform (it's a tool to find cheeses you'll love based on your favorite color... very scientific).
 
