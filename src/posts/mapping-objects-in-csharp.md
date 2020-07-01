@@ -37,13 +37,13 @@ public class User
 }
 ```
 
-I also have an admin screen that lists all of my users. I don't need, or want, nearly as much information for that view. So, I'm going to return a summary object. You might hear these referred to as view models. There's nothing special about them; they're data models exist to make rendering the data via an API response or HTML page or CSV download easier. For a web app, they can look pretty darn boring.
+I also have an admin screen that lists all of my users. I don't need, or want, nearly as much information for that view. So, I'm going to return a summary object. You might hear these referred to as view models. There's nothing special about them; they're data models that exist to make rendering the data via an API response or HTML page or CSV download easier. For a web app, they can look pretty darn boring.
 
 ```csharp
 public class UserSummary
 {
-  public int Id { get; set;  }
-  public string Name { get; set;  }
+  public int Id { get; set; }
+  public string Name { get; set; }
 }
 ```
 
@@ -109,8 +109,8 @@ Let's revisit the `UserSummary` and add a responsiblity for creating itself from
 ```csharp
 public class UserSummary
 {
-  public int Id { get; set;  }
-  public string Name { get; set;  }
+  public int Id { get; set; }
+  public string Name { get; set; }
 
   public static UserSummary MapFrom(User source)
   {
@@ -165,8 +165,8 @@ Let's change our `UserSummary` class again and give C# a roadmap on how to get f
 ```csharp
 public class UserSummary
 {
-  public int Id { get; set;  }
-  public string Name { get; set;  }
+  public int Id { get; set; }
+  public string Name { get; set; }
 
   public static explicit operator UserSummary(User source)
   {
@@ -205,8 +205,8 @@ After modifying our code, we have the following
 ```csharp
 public class UserSummary
 {
-  public int Id { get; set;  }
-  public string Name { get; set;  }
+  public int Id { get; set; }
+  public string Name { get; set; }
 
   public static implicit operator UserSummary(User source)
   {
