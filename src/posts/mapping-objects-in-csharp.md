@@ -66,7 +66,9 @@ public void MapUserManually()
 }
 ```
 
-This approach _can_ be sensible. Especially if there is only one location, or function, where the mapping occurs. However, this quickly falls down if you have, say, three controllers that rely on the same view model. If we decide that the summary must always include the email address, then we have to update *every* place that we map `User` -> `UserSummary`. This is also a bit unpleasant for users of your code, either other developers on your team or you in six months, because it forces you to be intimately familiar with how to construct a valid `UserSummary` from a `User`.
+This approach _can_ be sensible. Especially if there is only one location, or function, where the mapping occurs. However, this quickly falls down if you have, say, three controllers that rely on the same view model. If we decide that the summary must always include the email address, then we have to update *every* place that we map `User` -> `UserSummary`. 
+
+This is also a bit unpleasant for users of your code, either other developers on your team or you in six months, because it forces you to be intimately familiar with how to construct a valid `UserSummary` from a `User`.
 
 There's got to be a better way
 
@@ -100,7 +102,7 @@ Note, AutoMapper has a method that you can call after you set up the configurati
 
 ## Static Map Method
 
-This next approach is my personal favorite. There's a few reasons for that. First, it puts the responsibility for mapping in **one** spot. Since I tend to put view models near my controllers and the domain "higher" in the hierarchy, that naturally forces the responsibility into the view model as it can see the domain but the domain can't see it.
+This next approach is my personal favorite. There's a few reasons for that. First, it puts the responsibility for mapping in **one** spot. This could be a dedicated mapper object somewhere, but I like to have the mapping live right with the target. This feels natural in a "typical" namespace hierarchy as well where the view models will live closer to the end user and the domain will live further away.
 
 Let's revisit the `UserSummary` and add a responsiblity for creating itself from a `User`
 
@@ -140,7 +142,7 @@ public void MapUserWithStaticMapper()
 
 It's very similar to the first example but now the mapping has a home.
 
-One downside of this is that now we have to write _a lot_ of mapping code. However, there is a very nice Visual Studio add-in that will do this work for you. Check out the [MappingGenerator](https://marketplace.visualstudio.com/items?itemName=54748ff9-45fc-43c2-8ec5-cf7912bc3b84.mappinggenerator). 
+One downside of this is that now we have to write _a lot_ of mapping code. However, there is a very nice Visual Studio add-in that will do this work for you. Check out the [MappingGenerator](https://marketplace.visualstudio.com/items?itemName=54748ff9-45fc-43c2-8ec5-cf7912bc3b84.mappinggenerator) add-in by [Cezary Piątek](https://twitter.com/cezary_piatek). 
 
 Depending on how frequently your mappings change and the existing structure of your app, you may find AutoMapper a better fit for you or you may prefer a static mapper.
 
