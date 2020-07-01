@@ -47,7 +47,7 @@ public class UserSummary
 }
 ```
 
-So, how do we get the data from our domain and put it in our view model? Seems trivially easy, right? You probably came up with a few options already. This would be a rather dull blog post if I stopped writing here and left the rest as an exercise to the reader. Let's take a look at some options.
+So, how do we get the data from our domain and put it in our view model? Seems trivially easy, right? You probably came up with a few ideas already. This would be a rather dull blog post if I stopped writing here and left the rest as an exercise to the reader. Let's take a look at some options.
 
 ## Inline Mapping
 
