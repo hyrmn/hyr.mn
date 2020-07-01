@@ -15,7 +15,7 @@ a {
   } 
   
   code {
-    @apply bg-gray-200;
+    @apply bg-yellow-100;
     @apply text-sm;
     @apply p-1;
     @apply rounded;
@@ -70,10 +70,17 @@ a {
   
 .blogentry h2 {
     @apply mt-6;
+    @apply -mb-5;
     @apply text-lg;
     @apply font-bold;
 }
  
+.blogentry h3 {
+  @apply mt-6;
+  @apply -mb-5;
+  @apply font-bold;
+}
+
 .blogentry p {
     @apply mt-6;
 }
