@@ -19,9 +19,9 @@ Alice tells you that you've got one task. Come up with as many was as possible, 
 
 Luckily, since you read my blog, you are well-prepared with stupid ways to do stupid things with code.
 
-Let's do the simplest method first, just to make sure we're jibing with Alice and Bob.
-
 ### Using ToLower()
+
+Let's do the simplest method first, just to make sure we're jibing with Alice and Bob.
 
 ```csharp
 var s = "TEST STRING😁";
@@ -36,6 +36,8 @@ You consult MSDN and see that the [String class](https://docs.microsoft.com/en-u
 We can work with this.
 
 ### Using ToLower() one character at a time
+
+Let's write a for loop and lowercase a character at a time.
 
 ```csharp
 var s = "TEST STRING😁";
