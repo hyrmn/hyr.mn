@@ -15,7 +15,7 @@ The good news, though. They encourage you to bring your own laptop configured ho
 
 You show up. You think you're prepared for anything. You walk in only to be greeted by Alice and Bob. You think you're getting set up for a [cryptology joke](https://en.wikipedia.org/wiki/Alice_and_Bob) but, no, it's interview time.
 
-Alice tells you that you've got one task. Come up with as many was as possible, using your preferred language, to convert a string to lowercase. Given the string "This IS COOL", you should end up with "this is cool".
+Alice tells you that you've got one task. Come up with as many ways as possible, using your preferred language, to convert a string to lowercase. Given the string "This IS COOL", you should end up with "this is cool".
 
 Luckily, since you read my blog, you are well-prepared with stupid ways to do stupid things with code.
 
