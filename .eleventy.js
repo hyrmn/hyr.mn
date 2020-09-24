@@ -12,9 +12,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRss);
 
-  // npm watch doesn't seem to like updating dist when src/_includes/css/base.css changes
-  // so I'm setting postcss to publish to /src/css/base.css and then copying through to dist 
-  eleventyConfig.addPassthroughCopy("./src/css");
+  eleventyConfig.addWatchTarget('./src/css')
+  eleventyConfig.addWatchTarget('./tailwind.config.js')
+
   eleventyConfig.addPassthroughCopy("./src/img");
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
@@ -26,7 +26,7 @@ module.exports = function (eleventyConfig) {
       includes: '_includes',
     },
     passthroughFileCopy: true,
-    templateFormats: ['njk', 'md'],
+    templateFormats: ['njk', 'md', 'js'],
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
   }
