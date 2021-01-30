@@ -22,10 +22,10 @@ Makes 1 14" pizza (or 2 thin-crust 12" pizzas)
 * 3/4 cup warm (110-120F) water
 * 2 1/4 tsp (one packet) active dry yeast.
 * 1 tsp salt
-* 1 tsp honey
+* 1 tsp honey (optional)
 * 2 tbsp olive oil
 
-Put the water, honey and yeast in your mixing bowl. I proof the yeast to make sure it's good (I buy in bulk and store it in the freezer). Basically, wait for it to bubble a little. The honey is going to cause the yeast to work overtime.
+Put the water, honey (if using) and yeast in your mixing bowl. I proof the yeast to make sure it's good (I buy in bulk and store it in the freezer). Basically, wait for it to bubble a little. The honey is going to cause the yeast to work overtime.
 
 Add in the flour, salt and oil while mixing on low with a dough hook. 
 
