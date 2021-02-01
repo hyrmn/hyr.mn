@@ -67,6 +67,12 @@ a {
     @apply mt-4;
     @apply text-lg;
   }
+
+  .blogentry ul {
+    padding-top: 1rem;
+    @apply list-inside;
+    @apply list-disc;
+  }
   
 .blogentry h2 {
     @apply mt-6;
