@@ -29,7 +29,13 @@ Again, over time, what you thought you built is not what you built. Multiply tha
 
 ## How to handle code untruths
 
-For me, this is multi-pronged.
+For me, this is multi-pronged. 
+
+You must revisit the concepts and models in your code and question if it still makes sense. Be zealous on this. Every design decision is an inflection point and a chance to think about past choices.
+
+Here's an example that I'm playing with right now. We have some resources that can be deactivated. Deactivated resources shouldn't show up through any of the normal UI paths. But, you can choose to view them and reactivate them. We have other resources that can be deleted. Sometimes delete means a hard delete. *Poof* Gone. But, sometimes they have to be soft-deleted. A soft-deleted resource still exists but shouldn't show up through any of the normal UI paths.
+
+That introduces cognitive load that might not be worth it. Do we really need three paths for making a resource disappear? Is the choice to live with it the easy choice or the right choice? Would addressing it help the system or just feed a need to be technically correct?
 
 During development, leave your code better than you found it. You can't be solely focused on pulling work, completing work, pushing work and moving on. You need to revisit those old code paths. Clean behind the fridge once in a while. Can your unit tests be better? Should you add an integration test for that path you noticed but didn't touch while you were working on your feature?
 
