@@ -31,7 +31,7 @@ WORKDIR "/src/MyDotNetApp/"
 COPY "MyDotNetApp/." .
 
 ENV NODE_ENV=production
-RUN npm ci --also=dev
+RUN npm ci
 RUN npm run build
 RUN dotnet build "MyDotNetApp.csproj" -c Release -o /app/build
 
@@ -55,22 +55,22 @@ FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
 COPY --from=node_base . .
 ```
 
-We're going to pull down Node's LTS image built on Buster-Slim and Microsoft's .NET 5 SDK image build on Buster-Slim. Then copy the contents of the Node image into the .NET image. For me, this means I get the Node bits I need from an official image rather than using `apt-get` to figure out and install my own dependencies.
+We're going to pull down Node's LTS image built on Buster-Slim and Microsoft's .NET 5 SDK image built on Buster-Slim. Then we'll copy the contents of the Node image into the .NET image. For me, this means I get the Node bits I need from an official image rather than using `apt-get` to figure out and install my own dependencies.
 
 On to the build part:
 
 ```json
 ENV NODE_ENV=production
-RUN npm ci --also=dev
+RUN npm ci
 RUN npm run build
 RUN dotnet build "MyDotNetApp.csproj" -c Release -o /app/build
 ```
 
 PurgeCSS will automatically tree-shake the final CSS for you if it's in production mode. So, I default the `NODE_ENV` to production. This will also help with any other tooling I bring in later that might make different choices based on build environment. 
 
-You should use `npm ci` on your build server rather than `npm install` as `ci` will use your `package-lock.json` file to grab versions... which gives you a bit of confidence that you won't accidentally rev a version that you haven't tried locally yet. Since all of my dependencies are for building, I've installed them as dev dependencies (`npm install <package> --save-dev`). `npm ci` will ignore those by default so we need to tell it to grab them as well.
+You should use `npm ci` on your build server rather than `npm install` as `ci` will use your `package-lock.json` file to grab versions... which gives you a bit of confidence that you won't accidentally rev a version that you haven't tried locally yet.
 
-Then it's a matter of running my [npm script](https://github.com/TwoPeas/SharpStatusApp/blob/main/SharpStatusApp/package.json#L13) with `npm run build` and compiling my .NET app with `dotnet build` then we bundle things up and
+Then it's a matter of running my [npm script](https://github.com/TwoPeas/SharpStatusApp/blob/main/SharpStatusApp/package.json#L10) with `npm run build` and compiling my .NET app with `dotnet build` then we bundle things up and
 get a svelte(?) final image with just our assets and runtime and none of the build tools or artifacts.
 
 ## Wrapping Up
