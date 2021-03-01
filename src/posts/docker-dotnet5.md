@@ -14,7 +14,7 @@ I am building an app with .NET 5 and ASP.NET Core 5. And, I want to run it on a 
 
 That part isn't hard. When you create a new .NET project, you get a multi-stage Dockerfile for free (well, as long as you select that option). But, I want to use vanilla Node.js build options for processing and bundling my CSS and JS files. The common solutions I've seen for Docker + Node + .NET involve starting with the base .NET image and then using `apt-get` to install Node. I didn't want to go down that path if I could help it. I don't know why, but the idea of modifying the Docker image outside of just building stuff offended my aesthetic.
 
-As it turns out, you can start with a .NET base image, then layer Node on that, build your app, and then copy out the final assets.
+What I've learned so far is that you can start with a .NET base image, then layer Node on that, build your app, and then copy out the final assets.
 
 ```json
 FROM mcr.microsoft.com/dotnet/aspnet:5.0-buster-slim AS base
