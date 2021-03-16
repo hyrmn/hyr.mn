@@ -104,7 +104,7 @@ Run this program and you now have a pretty square on an expanse.
 
 Let's go a little further and generate a lot of squares. A lot of multi-colored squares.
 
-If we think about each square as going in a row and column, then we can look for a number that's easily divisible into 1920 and 1080. Completely by coincidence, if we divide by 40, we get 48 columns and rows.
+If we think about each square as going in a row and column, then we can look for a number that's easily divisible into 1920 and 1080. Completely by coincidence, if we divide by 40, we get 48 columns and 27 rows.
 
 ```csharp
 image.Mutate(ic =>
