@@ -10,7 +10,7 @@ tags:
   - blogentries
 ---
 
-I sa a tweet from [@James_M_South](https://twitter.com/James_M_South), creator of the amazing ImageSharp library where he mentioned there wasn't a lot of public chatter about said library. Now, I know nothing about image processing or graphics. But, I've been wanting to learn more about creating [Algorithmic Art](https://en.wikipedia.org/wiki/Algorithmic_art), or [Generative Art](https://en.wikipedia.org/wiki/Generative_art), for a while. And, [James' tweet](https://twitter.com/James_M_South/status/1367430358472536064) inspired me to dive in.
+I saw a tweet from [@James_M_South](https://twitter.com/James_M_South), creator of the amazing ImageSharp library where he mentioned there wasn't a lot of public chatter about said library. Now, I know nothing about image processing or graphics. But, I've been wanting to learn more about creating [Algorithmic Art](https://en.wikipedia.org/wiki/Algorithmic_art), or [Generative Art](https://en.wikipedia.org/wiki/Generative_art), for a while. And, [James' tweet](https://twitter.com/James_M_South/status/1367430358472536064) inspired me to dive in.
 
 ## Generative Art?
 
