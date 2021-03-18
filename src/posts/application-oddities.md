@@ -13,7 +13,7 @@ Last week, I [tweeted out](https://twitter.com/hyrmn/status/1355249530086838279)
 - How you built the system  
 - How your system is used  
 
-I'm not tredding any new ground here. There's been a lot of thinking by smart people on emerging properties of complex systems. But, I wanted to take a bit of time and talk about my experience and maybe share some ideas and techniques for life in a small company with a focus on a B2B SaaS product.
+I'm not treading any new ground here. There's been a lot of thinking by smart people on emerging properties of complex systems. But, I wanted to take a bit of time and talk about my experience and maybe share some ideas and techniques for life in a small company with a focus on a B2B SaaS product.
 
 I've been living with, and supporting, a software product for 8 years now. So, these opinions are formed by that.
 
