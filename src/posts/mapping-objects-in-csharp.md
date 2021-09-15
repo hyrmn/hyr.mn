@@ -142,7 +142,7 @@ public void MapUserWithStaticMapper()
 
 It's very similar to the first example but now the mapping has a home.
 
-One downside of this is that now we have to write _a lot_ of mapping code. However, there is a very nice Visual Studio add-in that will do this work for you. Check out the [MappingGenerator](https://marketplace.visualstudio.com/items?itemName=54748ff9-45fc-43c2-8ec5-cf7912bc3b84.mappinggenerator) add-in by [Cezary Piątek](https://twitter.com/cezary_piatek). 
+One downside of this is that now we have to write _a lot_ of mapping code. However, there is a very nice Visual Studio add-in that will do this work for you. Check out [MappingGenerator](https://mappinggenerator.net); a Visual Studio add-in by [Cezary Piątek](https://twitter.com/cezary_piatek). 
 
 Depending on how frequently your mappings change and the existing structure of your app, you may find AutoMapper a better fit for you or you may prefer a static mapper.
 
