@@ -182,7 +182,7 @@ Before I go, I wanted to dive into the temp version and tuple version further. T
 
 Using that to explore the compiled DLL from our test above, let's look at the generated IL for the `SwapWithTemp` version:
 
-```IL
+```csharp
 .maxstack 2
 .locals init (
     [0] int32 tmp
@@ -209,7 +209,7 @@ It creates a local variable, `num`, and then does the assignment swapping.
 
 Now let's look at the decompiled version of `SwapWithTuple`
 
-```IL
+```csharp
 .maxstack 2
 .locals init (
     [0] int32,
