@@ -37,7 +37,7 @@ Last, you're going to end up with just an HTTPS site at the end of this step. Do
 
 ## Step 2 - Add an HTTP to HTTP redirect
 
-Skip almost to the end of this [Google Cloud guide on setting up an HTTP to HTTPS load balancer](https://cloud.google.com/load-balancing/docs/https/setting-up-http-https-redirect#partial-http-lb). This whole article provides a nice overview of the network topology and how and why. But, if you're in a hurry, just skip to the section on redirecting traffic to your HTTPS load balancer. You have an HTTPS load balancer from step 1 already, so now you need to set up one that will listen to HTTP.
+Skip almost to the end of this [Google Cloud guide on setting up an HTTP to HTTPS load balancer](https://cloud.google.com/load-balancing/docs/https/setting-up-http-https-redirect#partial-http-lb). This whole article provides a nice overview of the network topology and how and why. But, if you're in a hurry, just skip to the section on redirecting traffic to your HTTPS load balancer. You have an HTTPS load balancer from step 1 already, so now you need to set up one that will listen to HTTPS.
 
 At this point, you should be set. 
 
@@ -45,7 +45,7 @@ At this point, you should be set.
 
 We're going to leverage Cloud Build for this. And, we're going to leverage the existing [Cloud Builders](https://github.com/GoogleCloudPlatform/cloud-builders) that Google provides.
 
-You'll need to create a `cloudbuild.yaml` (or json) file in your repository that we'll then point Cloud Run at. Here's [my cloudbuid.yaml](https://github.com/TwoPeas/SharpStatusSite/blob/main/cloudbuild.yaml)
+You'll need to create a `cloudbuild.yaml` (or json) file in your repository that we'll then point Cloud Run at. Here's [my cloudbuild.yaml](https://github.com/TwoPeas/SharpStatusSite/blob/main/cloudbuild.yaml)
 
 ```yaml
 steps:
