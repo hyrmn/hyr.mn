@@ -35,7 +35,7 @@ public void SwapWithXor(ref int x, ref int y)
 }
 ```
 
-The `^` in this context is the XOR operator. It's much easier to visualize how things work if we can see the numbers like a computer does. Since computers see everything in binary, we need to as well.
+The `^` in this context is the XOR, or Exclusive OR, operator. It's much easier to visualize how things work if we can see the numbers like a computer does. Since computers see everything in binary, we need to as well.
 
 ```csharp
 int x = 10;
@@ -48,7 +48,7 @@ x = 0000 1010
 y = 0001 0100
 ```
 
-The rules for [XOR](https://en.wikipedia.org/wiki/XOR_gate), Exclusive Or, are that it's true when one of the values is true and false if both values are the same.
+The rules for [XOR](https://en.wikipedia.org/wiki/XOR_gate) are that it's true when one of the values is true and false if both values are the same (so 1 XOR 0 is 1, 1 XOR 1 and 0 XOR 0 are 0).
 
 Let's step through the code and see what happens under the covers
 
