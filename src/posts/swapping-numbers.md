@@ -242,4 +242,4 @@ IL_000c: ret
 
 It's incredibly similar to the version that uses a temp variable to swap. Except, in this case, it's using two temp variables for us; `num` and `num2`. That explains why they're so close for timings on our benchmark tests. And, while it actually wastes just a little tiny bit more than `SwapWithTemp`, we're in a new bountiful age of variables where everyone can have as many as they want without some central variable assignment authority getting upset.
 
-Anyway, that covers more than any reasonable person ever cared to know about swapping two numbers in C#. If you can think of any other creative ways that you want to contribute, please stop by https://gist.github.com/hyrmn/387e9e8d4e2858daf5e89097396b88fb and leave a comment with some code.
+Anyway, that covers more than any reasonable person ever cared to know about swapping two numbers in C#. If you can think of any other creative ways that you want to contribute, please stop by [https://gist.github.com/hyrmn/387e9e8d4e2858daf5e89097396b88fb](https://gist.github.com/hyrmn/387e9e8d4e2858daf5e89097396b88fb) and leave a comment with some code.
