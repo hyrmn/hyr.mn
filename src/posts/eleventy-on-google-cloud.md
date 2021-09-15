@@ -35,9 +35,9 @@ On the subject regarding the load balancer, unless you know what you're doing an
 
 Last, you're going to end up with just an HTTPS site at the end of this step. Don't worry, though, we'll take care of that next to add an HTTP to HTTPS redirect.
 
-## Step 2 - Add an HTTP to HTTP redirect
+## Step 2 - Add an HTTP to HTTPS redirect
 
-Skip almost to the end of this [Google Cloud guide on setting up an HTTP to HTTPS load balancer](https://cloud.google.com/load-balancing/docs/https/setting-up-http-https-redirect#partial-http-lb). This whole article provides a nice overview of the network topology and how and why. But, if you're in a hurry, just skip to the section on redirecting traffic to your HTTPS load balancer. You have an HTTPS load balancer from step 1 already, so now you need to set up one that will listen to HTTPS.
+Skip almost to the end of this [Google Cloud guide on setting up an HTTP to HTTPS load balancer](https://cloud.google.com/load-balancing/docs/https/setting-up-http-https-redirect#partial-http-lb). This whole article provides a nice overview of the network topology and how and why. But, if you're in a hurry, just skip to the section on redirecting traffic to your HTTPS load balancer. You have an HTTPS load balancer from step 1 already, so now you need to set up one that will listen to HTTP.
 
 At this point, you should be set. 
 
