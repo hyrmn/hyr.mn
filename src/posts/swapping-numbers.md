@@ -62,16 +62,16 @@ x = x ^ y;
 //  0000 1010
 //  0001 0100
 //x=0001 1110
-//If we work left to right then we know at the end x will be 0001 1110 (incidentally, this is 30 in decimal)
+//If we work left to right then we know at the end x will be 0001 1110 
 
 //Now we do the same thing with y
 y = y ^ x;
-//Working left to right and comparing the new value of x (0001 1110) to y
+//Work left to right and compare the new value of x (0001 1110) to y
 //so compare these two with an XOR
 //  0001 1110
 //  0001 0100
 //y=0000 1010
-//At the end of this, y is 0000 1010 (10 in decimal. Oh, nice, the value x originally had)
+//At the end of this, y is 0000 1010 (10 in decimal. Oh, nice, the original value of x)
 
 //Now do the same thing with x again to get the original value of y
 x = x ^ y;
@@ -80,7 +80,7 @@ x = x ^ y;
 //x=0001 0100
 ```
 
-We saved using a temp variable, which honestly hasn't mattered since hard drives shrunk down from the size of small cars. But, is it faster? We'll get into that in a minute.
+We saved using a temp variable, which honestly hasn't mattered since hard drives shrunk down from the size of small cars. But, is it better? We'll get into that in a minute.
 
 I want to share one more way to swap numbers in C#. We can use a [tuple](https://en.wikipedia.org/wiki/Tuple).
 
@@ -91,9 +91,9 @@ public void SwapWithTuple(ref int x, ref int y)
 }
 ```
 
-You will either see this and say that it's the most straightforward and idiomatic way to do a number swap in C# or you'll hate it and swear off this approach forever. We're telling the compile to make a tuple of the values x and y and then assign it the tuple of values y and x. We'll go under the covers later and it will look more obvious then if it doesn't now.
+You will either see this and say that it's the most straightforward and idiomatic way to do a number swap in C# or you'll hate it and swear off this approach forever. We're telling the compiler to make a tuple of the values x and y and then assign it the tuple of values y and x. We'll go under the covers later and it will look more obvious then if it doesn't now.
 
-So, three viable ways to swap two numbers. Which one makes the most sense? In some ways... it depends. Writing software, in any language, can be a balancing act of writing code that is fast and code that is maintainable. If the XOR approach happened to be the fastest code, and the code was called often enough that optimizing a few nanoseconds was worth it, then it'd be worth using an approach that isn't as immediately obvious to everyone. (possibly including you six months later).
+So, three viable ways to swap two numbers. Which one makes the most sense? Writing software, in any language, can be a balancing act of writing code that is fast and code that is maintainable. If the XOR approach happened to be the fastest code, and the code was called often enough that optimizing a few nanoseconds was worth it, then it'd be worth using an approach that isn't as immediately obvious to everyone. (possibly including you six months later).
 
 As we did in [Measure Two Hundred Times, Tweak Twice](/fun-with-benchmarkdotnet/), let's set up [BenchmarkDotNet](https://benchmarkdotnet.org/) and profile some code.
 
@@ -172,11 +172,15 @@ Compile the above code in release mode and then run the exe from the command pro
 | SwapWithInterlock | 10 | 20 |  3.0909 ns | 0.0334 ns | 0.0261 ns |
 ```
 
-We can trust BenchmarkDotNet to give us useful measurements because it's handled all of the work of warmup, works to remove noise, and repeats runs to get useful data.
+We can trust BenchmarkDotNet to give us useful measurements because it's handled all of the execution warmup, works to remove noise, and repeats runs to get useful data.
 
 ## Wrapping up
 
-So, at least in C#, the temp variable and tuple approach are the best. And, in my mind, the two most readable as well. If you show up at an interview and they ask you to swap two numbers without using a third, you can push back and dazzle them with science. If you like the tuple syntax, then you should go with that. If you prefer the temp, then that's fine too. While I'm not in love with the tuple version, I would say that will be the canonical version you'll encounter in the wild and I can live with that.
+So, at least in C#, the temp variable and tuple approach are the fastest. And, in my mind, the two most readable as well.
+
+If you show up at an interview and they ask you to swap two numbers without using a third, you can push back and dazzle them with science.
+
+If you like the tuple syntax, then you should go with that. If you prefer the temp, then that's fine too. While I'm not in love with the tuple version, I would say that will be the canonical version you'll encounter in the wild and I can live with that.
 
 Before I go, I wanted to dive into the temp version and tuple version further. This time with a look at the generated [IL](https://en.wikipedia.org/wiki/Common_Intermediate_Language). My go-to tool for this on Windows is [ILSpy](https://www.microsoft.com/en-us/p/ilspy/9mxfbkfvsq13?SilentAuth=1&wa=wsignin1.0&activetab=pivot:overviewtab).
 
@@ -236,6 +240,6 @@ IL_000b: stind.i4
 IL_000c: ret
 ```
 
-It's incredibly similar to the version that uses a temp variable to swap. Except, in this case, it's using two temp variables for us; `num` and `num2`. That explains why they're so close for timings on our benchmark tests.
+It's incredibly similar to the version that uses a temp variable to swap. Except, in this case, it's using two temp variables for us; `num` and `num2`. That explains why they're so close for timings on our benchmark tests. And, while it actually wastes just a little tiny bit more than `SwapWithTemp`, we're in a new bountiful age of variables where everyone can have as many as they want without some central variable assignment authority getting upset.
 
 Anyway, that covers more than any reasonable person ever cared to know about swapping two numbers in C#. If you can think of any other creative ways that you want to contribute, please stop by https://gist.github.com/hyrmn/387e9e8d4e2858daf5e89097396b88fb and leave a comment with some code.
