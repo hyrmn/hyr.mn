@@ -28,7 +28,7 @@ First, we'll need a program to run our code.  I'm going to create a new .NET 6.0
 >dotnet add package SixLabors.ImageSharp.Drawing --version 1.0.0-beta13
 ```
 
-Note, at the time of this post, [ImageSharp.Drawing](https://www.nuget.org/packages/SixLabors.ImageSharp.Drawing) is still in beta so you'll need to explicitly add the version. Be sure to check before you start in case there's a newer version available.
+Note, at the time of this post, [ImageSharp.Drawing](https://www.nuget.org/packages/SixLabors.ImageSharp.Drawing) is still in beta so you'll need to explicitly add the version. Be sure to check before you start in case there's a newer version available. Technically, for this post, we're not even using anything from the Drawing package, but it has a dependency on ImageSharp and we'll be back to using the Drawing package in part 3 so... to keep the flow consistent... Onward!
 
 My goal is to read in an existing file, sort the pixels by some arbitrary scale, and then write them out to a destination file. We'll use the source image's dimensions to create the destination image.
 
