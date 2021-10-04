@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "rimraf ./dist/",
     "build": "eleventy",
+    "build-prod": "cross-env NODE_ENV=production npm run clean && npm run build",
     "watch": "eleventy  --serve --port=8181",
     "start": "npm run watch"
   },
@@ -20,16 +22,15 @@
   },
   "homepage": "https://github.com/hyrmn/hyr.mn#readme",
   "dependencies": {
-    "@11ty/eleventy": "^0.11.0",
-    "@11ty/eleventy-plugin-rss": "^1.0.7",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
-    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-plugin-rss": "^1.1.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.2",
     "@tailwindcss/typography": "^0.4.1",
-    "cross-env": "^7.0.2",
-    "luxon": "^1.24.1",
+    "cross-env": "^7.0.3",
+    "luxon": "^1.28.0",
     "npm-run-all": "^4.1.5",
-    "postcss": "^7.0.32",
-    "postcss-clean": "^1.1.0",
-    "tailwindcss": "^1.4.6"
+    "postcss": "^8.3.8",
+    "rimraf": "^3.0.2",
+    "tailwindcss": "^2.2.16"
   }
 }

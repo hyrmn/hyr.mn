@@ -15,7 +15,6 @@ module.exports = class {
   async render({ content }) { 
     return await postcss([
       require('tailwindcss')('./tailwind.config.js'),
-      require('autoprefixer')
     ])
     .process(content)
     .then((result) => result.css)

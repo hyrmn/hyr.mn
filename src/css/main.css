@@ -1,8 +1,4 @@
-/* purgecss start ignore */
-@tailwind  base;
-/* purgecss end ignore */
-
-/* purgecss start ignore */
+@tailwind base;
 a {
     @apply border-b-2;
     @apply text-blue-400;
@@ -11,8 +7,8 @@ a {
 
 a:hover,
 a:focus {
-  @apply text-orange-700;
-  @apply border-orange-500;
+  @apply text-yellow-700;
+  @apply border-yellow-500;
 } 
   
 code {
@@ -45,7 +41,7 @@ blockquote {
 .nav-link:hover {
   @apply text-blue-500;
   @apply border-b-2;
-  @apply border-orange-500;
+  @apply border-blue-800;
 }
 
 .nav-link-social {
@@ -60,10 +56,6 @@ blockquote {
 .nav-link-social:hover {
   @apply text-blue-500;
 }
-/* purgecss end ignore */
 
-/* purgecss start ignore */
-@tailwind  components;
-/* purgecss end ignore */
-
+@tailwind components;
 @tailwind utilities;
