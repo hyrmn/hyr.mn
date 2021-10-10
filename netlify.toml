@@ -9,3 +9,12 @@
 
 [context.production]
   environment = { NODE_VERSION = "14.18.0", NODE_ENV = "production" }
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+  from = "/blog/:slug"
+  to = "/:slug"
+  status = 200
