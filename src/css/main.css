@@ -5,14 +5,17 @@ a {
     @apply border-blue-400;
   }
 
+.prose a {
+  @apply border-0;
+}
+
 a:hover,
 a:focus {
   @apply text-yellow-700;
   @apply border-yellow-500;
 } 
-  
+
 code {
-  @apply bg-yellow-100;
   @apply text-sm;
   @apply p-1;
   @apply rounded;
@@ -51,6 +54,10 @@ blockquote {
   @apply w-6;
   @apply mr-4;
   @apply text-gray-900;
+}
+
+.dark .nav-link-social {
+  @apply text-white;
 }
 
 .nav-link-social:hover {

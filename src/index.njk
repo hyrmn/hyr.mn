@@ -11,17 +11,17 @@ title: Writing about software and other curiosities
 
 <p class="mb-6 text-xl">I <a href="/blog">write here</a>; mostly about what I'm learning or working on. I occasionally write about personal things as well.</p>
 
-<div class="w-full p-2 bg-gray-200 rounded">
-  <div class="border-b-2 border-gray-500 text-2xl text-blue-900 font-semibold">Spotlight</div>
-  <div class="text-lg text-gray-700">Some of my favorite posts</div>  
+<div class="w-full p-2 bg-gray-200 dark:bg-gray-900 rounded">
+  <div class="border-b-2 border-gray-500 text-2xl text-blue-900 dark:text-gray-50 font-semibold">Spotlight</div>
+  <div class="text-lg text-gray-700 dark:text-gray-400">Some of my favorite posts</div>  
   
   <div class="flex flex-wrap p-2">
 
-    <div class="relative w-64 mr-6 mt-6 rounded overflow-hidden shadow-lg bg-gray-100">
+    <div class="relative w-64 mr-6 mt-6 rounded overflow-hidden dark:border-4 dark:border-gray-700 shadow-lg bg-gray-100 dark:bg-gray-900">
         <img class="w-full" src="/img/card_kayakingonlakesuperior.jpg" alt="Kayaking on Lake Superior">
         <div class="px-6 py-4 h-48">
             <div class="font-bold text-xl mb-2">14 Years</div>
-            <p class="text-gray-700 text-base">
+            <p class="text-gray-700 text-base dark:text-gray-400">
                 Fourteen years ago, we stood in front of a judge and made a promise to each other. 
             </p>
         </div>
@@ -30,11 +30,11 @@ title: Writing about software and other curiosities
         </div>
     </div>
 
-    <div class="relative w-64 mt-6 rounded overflow-hidden shadow-lg bg-gray-100">
+    <div class="relative w-64 mt-6 rounded overflow-hidden dark:border-4 dark:border-gray-700 shadow-lg bg-gray-100 dark:bg-gray-900">
         <img class="w-full" src="/img/card_bandog.jpg" alt="Bandit the Dog">
         <div class="px-6 py-4 h-48">
             <div class="font-bold text-xl mb-2">On Pets</div>
-            <p class="text-gray-700 text-base">
+            <p class="text-gray-700 text-base dark:text-gray-400">
                 Reflections on 14 years with our furry companion
             </p>
         </div>
@@ -47,13 +47,13 @@ title: Writing about software and other curiosities
 
   <div class="flex flex-wrap p-2">
 
-    <div class="relative w-64 mr-6 mt-6 rounded overflow-hidden shadow-lg bg-gray-100">
+    <div class="relative w-64 mr-6 mt-6 rounded overflow-hidden dark:border-4 dark:border-gray-700 shadow-lg bg-gray-100 dark:bg-gray-900">
         <div class="flex items-center h-20 bg-yellow-500">
             <i class="fas fa-bezier-curve fa-3x mx-auto text-white"></i>
         </div>
         <div class="px-6 py-4 h-48">
             <div class="font-bold text-xl mb-2">Polly WaitAndRetry</div>
-            <p class="text-gray-700 text-base">
+            <p class="text-gray-700 text-base dark:text-gray-400">
                 Patterns and practices for wrapping .NET code in wait-and-retry blocks when making remote calls
             </p>
         </div>
@@ -62,13 +62,13 @@ title: Writing about software and other curiosities
         </div>
     </div>
 
-    <div class="relative w-64 mr-6 mt-6 rounded overflow-hidden shadow-lg bg-gray-100">
+    <div class="relative w-64 mr-6 mt-6 rounded overflow-hidden dark:border-4 dark:border-gray-700 shadow-lg bg-gray-100 dark:bg-gray-900">
         <div class="flex items-center h-20 bg-blue-500">
             <i class="fas fa-network-wired fa-3x mx-auto text-white"></i>
         </div>
         <div class="px-6 py-4 h-48">
             <div class="font-bold text-xl mb-2">Living with your creations</div>
-            <p class="text-gray-700 text-base">
+            <p class="text-gray-700 text-base dark:text-gray-400">
                 Lessons learned from a long-lived product
             </p>
         </div>
@@ -77,13 +77,13 @@ title: Writing about software and other curiosities
         </div>
     </div>
 
-    <div class="relative w-64 mt-6 rounded overflow-hidden shadow-lg bg-gray-100">
+    <div class="relative w-64 mt-6 rounded overflow-hidden dark:border-4 dark:border-gray-700 shadow-lg bg-gray-100 dark:bg-gray-900">
         <div class="flex items-center h-20 bg-green-500">
             <i class="fas fa-laptop-code fa-3x mx-auto text-white"></i>
         </div>
         <div class="px-6 py-4 h-48">
             <div class="font-bold text-xl mb-2">BenchmarkDotNet</div>
-            <p class="text-gray-700 text-base">
+            <p class="text-gray-700 text-base dark:text-gray-400">
                 Let's profile some code! And see if we can figure out some great options for things that might matter
             </p>
         </div>
@@ -96,15 +96,15 @@ title: Writing about software and other curiosities
 </div>
 
 <br />
-<div class="w-full p-2 bg-gray-200 rounded">
-  <div class="border-b-2 border-gray-500 text-2xl text-blue-900">Recent</div>
-  <div class="text-lg text-gray-700">My newest blog entries</div>  
+<div class="w-full p-2 bg-gray-200 dark:bg-gray-900 rounded">
+  <div class="border-b-2 border-gray-500 text-2xl text-blue-900 dark:text-gray-50 font-semibold">Recent</div>
+  <div class="text-lg text-gray-700 dark:text-gray-400">My newest blog entries</div>  
 
   {%- for entry in collections.blogentries | reverse -%}
   {%- if loop.index < 4 -%}
 <section class="mt-6">
     <h4 class="text-lg font-bold"><a href="{{ entry.url }}">{{ entry.data.title }}</a></h4>
-    <time value="{{ entry.date }}" class="text-gray-600">{{ entry.date | entryDate }}</time>
+    <time value="{{ entry.date }}" class="text-gray-600 dark:text-gray-400">{{ entry.date | entryDate }}</time>
     <div>
     {{ entry.data.description | safe }}
     </div>
