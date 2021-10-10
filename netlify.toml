@@ -1,7 +1,11 @@
 [build]
   command = "npm run build"
   publish = "dist"
-  # functions = "./src/functions"
+  functions = "./src/functions"
+  NODE_ENV = "14.18.0"
+
+[dev]
+  command = "npm run start"
 
 [context.production]
-  environment = { NODE_VERSION = "10.15.3", NODE_ENV = "production" }
+  environment = { NODE_VERSION = "14.18.0", NODE_ENV = "production" }
