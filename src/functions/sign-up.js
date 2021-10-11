@@ -2,7 +2,7 @@ const https = require('https')
 
 exports.handler = async (event, context) => {
   const msg = JSON.stringify({
-    email: 'ben.hyrman+test1@gmail.com',
+    email: event.queryStringParameters.email,
     referrer_url: 'hyr.mn',
     metadata: {},
     tags: ['hyr.mn'],
