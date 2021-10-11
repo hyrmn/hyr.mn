@@ -12,14 +12,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRss);
 
-  eleventyConfig.addWatchTarget('./src/css')
+  eleventyConfig.addWatchTarget('./src/site/css')
   eleventyConfig.addWatchTarget('./tailwind.config.js')
 
-  eleventyConfig.addPassthroughCopy("./src/img");
-  eleventyConfig.addPassthroughCopy("./src/css/prism.css");
-  eleventyConfig.addPassthroughCopy("./src/favicon.ico");
-  eleventyConfig.addPassthroughCopy("./src/robots.txt");
-  eleventyConfig.addPassthroughCopy("./src/_redirects");
+  eleventyConfig.addPassthroughCopy("./src/site/img");
+  eleventyConfig.addPassthroughCopy("./src/site/css/prism.css");
+  eleventyConfig.addPassthroughCopy("./src/site/favicon.ico");
+  eleventyConfig.addPassthroughCopy("./src/site/robots.txt");
 
   return {
     dir: {
