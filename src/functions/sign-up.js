@@ -1,3 +1,5 @@
+const axios = require('axios').default;
+
 const https = require('https')
 
 exports.handler = async (event, context) => {
@@ -23,26 +25,15 @@ exports.handler = async (event, context) => {
   let data = ''
   let statusCode = 0
 
-  const request = https
-    .request(options, (res) => {
-      statusCode = res.statusCode
-      res.on('data', (chunk) => {
-        data += chunk.toString()
-      })
+  axios.post('https://api.buttondown.email/v1/subscribers', msg)
+    .then(function (response) {
+      statusCode = response.status
+      console.log(response);
     })
-    .on('error', (e) => {
-      data = 'error'
+    .catch(function (error) {
+      statusCode = error.status
+      console.log(error);
     })
-
-  request.write(msg)
-  request.end()
-
-  if (statusCode == 500) {
-    return {
-      statusCode: 500,
-      body: "We weren't able to sign you up",
-    }
-  }
 
   return {
     statusCode: 200,
