@@ -46,6 +46,6 @@ exports.handler = async (event, context) => {
 
   return {
     statusCode: 200,
-    body: `You're signed up ${event.queryStringParameters.email} ${process.env['BUTTONDOWN_TOKEN']}`,
+    body: `You're signed up ${event.queryStringParameters.email} ${statusCode} ${data} `,
   }
 }
