@@ -14,10 +14,10 @@ title: Writing about software and other curiosities
 <p class="mb-6 text-xl">
     Of course, coming here to read isn't always convenient. I also have an <a href="/feed.xml">RSS feed</a> or you can sign up for my mailing list. You'll get each new post in your mailbox and nothing else.
 
-    <form action="/api/sign-up" method="get" class="mb-8 sm:max-w-lg sm:w-full sm:flex">
+    <form action="/api/sign-up" hx-get="/api/sign-up" hx-swap="outerHTML" method="get" class="mb-8 sm:max-w-lg sm:w-full sm:flex">
         <div class="min-w-0 flex-1">
-            <label for="hero-email" class="sr-only">Email address</label>
-            <input id="email" type="email" class="block w-full border border-gray-300 rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:border-blue-500 focus:ring-blue-500" placeholder="Enter your email">
+            <label for="email" class="sr-only">Email address</label>
+            <input name="email" id="email" type="email" class="block w-full border border-gray-300 rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:border-blue-500 focus:ring-blue-500" placeholder="Enter your email">
         </div>
         <div class="sm:mt-0 sm:ml-3">
             <button type="submit" class="block w-full rounded-md border border-transparent px-5 py-3 bg-blue-500 text-base font-medium text-white shadow hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:px-10">Subscribe</button>
