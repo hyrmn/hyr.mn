@@ -1,4 +1,4 @@
-const axios = require('axios').default;
+const axios = require('axios').default
 
 const https = require('https')
 
@@ -10,29 +10,26 @@ exports.handler = async (event, context) => {
     tags: ['hyr.mn'],
   })
 
-  const options = {
-    hostname: 'api.buttondown.email',
-    port: 443,
-    path: '/v1/subscribers',
-    method: 'POST',
-    headers: {
-      Authorization: 'token ' + process.env['BUTTONDOWN_TOKEN'],
-      'Content-Type': 'application/json',
-      'Content-Length': msg.length,
-    },
+  const headers = {
+    Authorization: 'token ' + process.env['BUTTONDOWN_TOKEN'],
+    'Content-Type': 'application/json',
+    'Content-Length': msg.length,
   }
 
   let data = ''
-  let statusCode = 0
+  var statusCode = 0
 
-  axios.post('https://api.buttondown.email/v1/subscribers', msg)
+  axios
+    .post('https://api.buttondown.email/v1/subscribers', msg, {
+      headers: headers,
+    })
     .then(function (response) {
       statusCode = response.status
-      console.log(response);
+      console.log(response)
     })
     .catch(function (error) {
       statusCode = error.status
-      console.log(error);
+      console.log(error)
     })
 
   return {
