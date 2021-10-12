@@ -16,9 +16,6 @@ exports.handler = async (event) => {
     'Content-Length': msg.length,
   }
 
-  let data = ''
-  var statusCode = 0
-
   console.log('sending POST')
   try {
     const result = await axios.post(
@@ -34,6 +31,13 @@ exports.handler = async (event) => {
     }
   } catch (err) {
     console.log(err)
+    if (err.response.status == 400) {
+      console.log('they signed up already')
+      return {
+        statusCode: 200,
+        body: "You're signed up!",
+      }
+    }
     return {
       statusCode: 400,
       body: "We weren't able to sign you up",

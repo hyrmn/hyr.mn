@@ -7,8 +7,8 @@
     "clean": "rimraf ./dist/",
     "build": "eleventy",
     "build-prod": "cross-env NODE_ENV=production npm run clean && npm run build",
-    "watch": "eleventy  --serve --port=8181",
-    "start": "npm run watch"
+    "watch": "eleventy --serve --port=8080",
+    "start": "netlify dev"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
     "axios": "^0.22.0",
     "cross-env": "^7.0.3",
     "luxon": "^1.28.0",
+    "netlify-cli": "^6.12.1",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.3.8",
     "rimraf": "^3.0.2",
