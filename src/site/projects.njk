@@ -9,17 +9,17 @@ title: Projects for your amusement and consideration
 Ideally, they're small. Likely, they exist because I wanted to learn something or illustrate a concept on its own. You may laugh at why I even bothered to make them. But, I had fun.
 </p>
 
-<div class="w-full p-2 bg-gray-200 rounded dark:bg-gray-900">
+<div class="w-full p-2 bg-gray-200 pb-4 rounded dark:bg-gray-900">
   <div class="border-b-2 border-gray-500 text-2xl text-blue-900 dark:text-gray-50 font-semibold">Projects</div>
 
     <div class="w-full mt-6 rounded overflow-hidden shadow-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-50">
         <div class="px-6 py-4">
             <div class="font-bold text-xl mb-2">Counting Lines in Various Languages</div>
-            <p class="text-base mb-6">
+            <p class="mb-6">
                 I was reflecting on <a href="https://en.wikipedia.org/wiki/Unix_philosophy">The Unix Philosophy</a> and it struck me that <code>wc</code> (a command-line utility that can count words, characters, and lines)
                 would be interesting to replace. But, unlike <code>wc</code>, I would only do one thing. Count lines. In writing my own utility, I could learn how to read input from the command line.
             </p>
-            <p class="text-base mb-6">
+            <p class="mb-6">
                 But, even better, I could rewrite the same utility in a few languages to get a sense for how various languages compare with a problem that is trivial but useful.
             </p>
             <ul class="mt-6">
@@ -29,4 +29,33 @@ Ideally, they're small. Likely, they exist because I wanted to learn something o
         </div>
     </div>
 
+    <div class="w-full mt-6 rounded overflow-hidden shadow-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-50">
+        <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Joe Everyman's Reporting Konverter</div>
+            <p class="mb-6">
+                My buddy, Joe, wanted a way to get the output from a .NET solution's unit tests into a CSV. I decided to see if that was possible. Through that, I learned that you can tell `dotnet test` to output in a 
+                standard XML format. From there, I was able to use the XML deserialization to read the test results and then write them back out as CSV. 
+            </p>
+            <p class="mb-6">
+                This project is useful to see an approach for generating test output, using a glob-matching library for finding files during directory traversal, and processing XML files. It's all packaged as a .NET tool as well
+                and the GitHub actions show off how to do that packaging.
+            </p>
+            <p class="mb-6">
+                The code is available on GitHub at <a href="https://github.com/hyrmn/jerk">https://github.com/hyrmn/jerk</a>.
+            </p>
+        </div>
+    </div>
+
+    <div class="w-full mt-6 rounded overflow-hidden shadow-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-50">
+        <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Generative Art Creator</div>
+            <p class="mb-6">
+                I've been playing with using algorithms to get computers to draw pretty pictures. Generative Art. Because I like the contrast of modern and retro, the UI for creating it all is a text-based UI that feels fresh 
+                out of the early 90's or late 80's.
+            </p>
+            <p class="mb-6">
+                The code is available on GitHub at <a href="https://github.com/hyrmn/gart">https://github.com/hyrmn/gart</a>.
+            </p>
+        </div>
+    </div>
 </div>
