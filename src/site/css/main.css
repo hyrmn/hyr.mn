@@ -1,18 +1,12 @@
 @tailwind base;
 a {
-    @apply border-b-2;
     @apply text-blue-400;
-    @apply border-blue-400;
+    @apply underline;
   }
-
-.prose a {
-  @apply border-0;
-}
 
 a:hover,
 a:focus {
   @apply text-yellow-700;
-  @apply border-yellow-500;
 } 
 
 code {
@@ -34,6 +28,7 @@ blockquote {
   @apply px-3;
   @apply border-b-2;
   @apply border-gray-100;
+  @apply no-underline;
 }
 
 .nav-link.active  {

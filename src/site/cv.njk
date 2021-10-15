@@ -2,3 +2,129 @@
 layout: layout.njk
 title: My work history
 ---
+
+
+<div class="flex flex-wrap -mx-4 overflow-hidden">
+    <div class="visible sm:hidden print:block pl-4">
+        <div class="mb-2">
+            <h1 class="text-3xl font-bold">Ben Hyrman</h1>
+            <h2 class="text-xl font-light">Backend Developer</h2>
+        </div>
+        <div class="mb-2">
+            Contact me: <a href="mailto:ben@hyr.mn" title="Email" class="text-lg no-underline">ben@hyr.mn</a> | <a href="https://twitter.com/hyrmn" title="Twitter" class="text-lg no-underline">@hyrmn</a>
+        </div>
+    </div>
+
+    <div class="my-4 px-4 w-full overflow-hidden sm:w-3/4">
+        <section class="prose">
+            <h2>Profile</h2>
+            <p>
+                Hi 👋🏻. My name is Ben Hyrman and I am a software developer. I mostly work on the backend bits of web applications but will boldly step into the scary world of JavaScript as needed. 
+                I 💖 working with teams to ship products. And I have years of experience leveraging cloud providers to run those products as a SaaS offering.
+            </p>
+            <p>
+                I'm most comfortable with C# and .NET Framework or the new and improved .NET (nee .NET Core). But, I have hands-on production knowledge with Java and I do like to learn new languages in my spare time.
+                If you're looking to grow your team, and your company allows me to grow and learn as well, then we should talk.
+            </p>
+        </section>
+        <section class="prose mt-4">
+            <h2>Recent Work Experience</h2>
+            <section>
+                <h3 class="border-b-2">rezStream</h3>
+                <h4 class="m-0">Senior Software Developer (2010-2016, 2019-Present)</h4>
+                <p>
+                    rezStream's focus is on reservation management software for boutique inns, independent hotels, and bed & breakfasts. We offer a property managment system, a booking engine, and integration into various
+                    Online Travel Agencies. I first started at rezStream in 2010 and then rejoined at the start of 2019 after a hiatus.
+                </p>
+                <p>
+                    A bit after first starting at rezStream, my coworker and I started the journey of recreating the company's product offering as a cloud-based SaaS product. I drove many of the high-level architectural decisions.
+                    We event-sourced (ES) many parts of the application (too many, but that's a good discussion for an interview or over lunch). We use Command Query Responsibility Segregation (CQRS) and store many of the read models
+                    in a noSQL store (RavenDB).
+                </p>
+                <p>
+                    On rejoining, my focus has been on adding features and enhancements, improving our deployment velocity, and revisiting design decisions I made nearly a decade ago. We're expanding our microservices
+                    as we decompose the monolith; moving away from RavenDB and towards SQL Server for read models; and clarifying our Event-Driven Architecture (EDA) for inter-process communication.
+                </p>
+                <p>
+                    <strong>Technologies used:</strong> .NET Framework, .NET, ASP.NET Web API, ASP.NET Core, Azure PaaS, Azure SQL Server, AngularJS (yes, the old one)
+                </p>
+            </section>
+            <section class="mt-2">
+                <h3 class="border-b-2">Allianz</h3>
+                <h4 class="m-0">Senior Developer - Global Digital Factory (2018)</h4>
+                <p>
+                    I assisted teams across other business units with implementing our Elasticsearch-backed Point of Interest search component. 
+                    I also prototyped services for the European Direct business platform. Due to extenuating circumstances, I chose to leave during my probation period.
+                </p>
+                <p>
+                    <strong>Technologies used:</strong> Java, Maven, Spring Boot, Eureka, Elasticsearch
+                </p>
+            </section>
+            <section class="mt-2">
+                <h3 class="border-b-2">eVision Industry Software</h3>
+                <h4 class="m-0">Senior Software Developer / Senior Team Lead (2016-2018)</h4>
+                <p>
+                    As a member of the Shift Vision team, my focus was on helping deliver eVision's product offering for electronic shift logging and crew handovers. Handovers are a critical part of safety and compliance in high-risk environments.
+                </p>
+                <p>
+                    Shift Vision was one of eVision's first true product offerings as opposed to the highly-bespoke projects that they had delivered in the past. I was able to leverage my strong background in product development to help direct focus to delivering a consistent and polished experience.
+                </p>
+                <p>
+                    The architecture uses React/Redux on the front-end and C# on the back-end. We made heavy use of Event Sourcing (ES) and Command and Query Responsibility Segregation (CQRS) to ensure actions in our system were fully audited and replay-able.
+                </p>
+                <p>
+                    I was promoted team lead with line manager responsibilities for the Shift Vision and Barrier Vision teams; Barrier Vision was a new product offering that we were taking from idea to MVP. As lead, I worked very closely with the product maangers on scoping and delivery planning and 
+                    worked closely with the team on coaching, retrospectives, planning, and thinking about broad product impacts across customers.
+                </p>
+                <p>
+                    As line manager, I met with my team members one-on-one, helped with goal-setting and career progression, and worked closely with the head of engineering on broader initiatives, team evaluations, raises, and hiring decisions.
+                </p>
+                <p>
+                    <strong>Technologies used:</strong> .NET Framework, .NET Core, ASP.NET Web API, NancyFx, PostgreSQL, AWS, React, Redux
+                </p>
+            </section>
+        </section>
+        <section class="prose mt-4">
+            <h2>Publications</h2>
+            <ul>
+                <li>Allison, D., B. Hyrman. <strong>Creating International-Ready Applications,</strong> November 2002, C#Today</li>
+                <li>Allison, D., B. Hyrman. <strong>Visual Basic .Net Scalability Handbook.</strong> Wrox Press Inc, 2002.</li>
+                <li>Conway, R., et al <strong>C# Class Design Handbook.</strong> Wrox Press Inc, 2003. <em>Reprint. APress Inc, 2003.</em></li>
+            </ul>
+        </section>
+        <section class="prose mt-4">
+            <h2>Education</h2>
+            Bachelor of Science in Computer Systems • <strong>Northern Michigan University</strong>
+            <br>
+            Minors in Computer Information Systems and History
+        </section>
+    </div>
+  
+    <div class="my-4 pt-4 w-1/4 border-gray-300 border-l-2 invisible sm:visible print:invisible">
+        <div class="px-2 mb-2">
+            <img src="/img/profile.jpg" alt="Profile Picture" class="rounded-full w-48 mx-auto mb-2" />
+            <h1 class="text-center text-3xl font-bold">Ben Hyrman</h1>
+            <h2 class="text-center text-xl font-light">Backend Developer</h2>
+        </div>
+        <div class="pl-4 mb-2">
+            <i class="fab fa-twitter fa-2x"></i>
+            <a href="https://twitter.com/hyrmn" title="Twitter" class="text-lg no-underline" target="_blank" rel="noopener noreferrer">@hyrmn</a>
+        </div>
+        <div class="pl-4 mb-2">
+            <i class="fab fa-github fa-2x"></i>
+            <a href="https://github.com/hyrmn" title="GitHub" class="text-lg no-underline" target="_blank" rel="noopener noreferrer">@hyrmn</a>
+        </div>
+        <div class="pl-4 mb-2">
+            <i class="fab fa-linkedin fa-2x"></i>
+            <a href="https://www.linkedin.com/in/benhyrman/" title="LinkedIn" class="text-lg no-underline" target="_blank" rel="noopener noreferrer">@benhyrman</a>
+        </div>
+        <div class="pl-4 mb-2">
+            <i class="fas fa-envelope fa-2x"></i>
+            <a href="mailto:ben@hyr.mn" title="Email" class="text-lg no-underline" target="_blank" rel="noopener noreferrer">ben@hyr.mn</a>
+        </div>
+
+    </div>
+  
+  </div>
+
+</div>

@@ -36,10 +36,9 @@
                   <li class="inline-block">
                     <a class="nav-link {% if page.url === '/projects/' %} active {% endif %}" href="/projects/">Projects</a>
                   </li>
-                  <!-- <li class="inline-block">
+                  <li class="inline-block">
                     <a class="nav-link {% if page.url === '/cv/' %} active {% endif %}" href="/cv/">Résumé</a>
-                  </li>
-                  -->
+                  </li>                  
                 </ul>
             </nav>
           
@@ -62,9 +61,9 @@
     </header>
 
     <div class="container mx-auto mb-6">
-      <div class="max-w-5xl mx-auto pt-2 pb-2">
+      <main class="max-w-5xl mx-auto pt-2 pb-2">
         {{ content | safe }}
-      </div>
+      </main>
     </div>
 
     <footer class="container max-w-5xl mx-auto pt-5 border-dashed border-gray-500 border-t-2 mb-6 dark:text-gray-300 print:hidden">

@@ -31,6 +31,9 @@ module.exports = {
               },
               h2: {
                 margin: 0,
+              },
+              h3: {
+                margin: 0,
               }
             }
           },
