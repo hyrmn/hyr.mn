@@ -1,4 +1,8 @@
 const { DateTime }  = require('luxon');
+
+const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
+
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
@@ -8,6 +12,23 @@ module.exports = function (eleventyConfig) {
       zone: 'utc'
     }).toFormat('LLLL d, y');
   });
+
+  // Customize Markdown library and settings:
+  let markdownLibrary = markdownIt({
+    html: true,
+    breaks: true,
+    linkify: true
+  }).use(markdownItAnchor, {
+    permalink: markdownItAnchor.permalink.ariaHidden({
+      placement: "after",
+      class: "visually-hidden",
+      symbol: "#"
+    }),
+    level: [1,2,3,4],
+    slugify: eleventyConfig.getFilter("slugify")
+  });
+
+  eleventyConfig.setLibrary("md", markdownLibrary);
 
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRss);
