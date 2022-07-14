@@ -1,8 +1,9 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
 module.exports = {
   mode: 'jit',
-  purge: [
+  content: [
     './src/**/*.njk',
   ],
   darkMode: 'media', // false or 'media' or 'class',
@@ -12,7 +13,7 @@ module.exports = {
       current: 'currentColor',
       black: colors.black,
       white: colors.white,
-      gray: colors.warmGray,
+      gray: colors.stone,
       blue: colors.blue,
       green: colors.green,
       yellow: colors.amber,
@@ -21,6 +22,9 @@ module.exports = {
       screens: {
         'print': {'raw': 'print'},
         // => @media  print { ... }
+      },
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
       typography(theme) {
         return {
