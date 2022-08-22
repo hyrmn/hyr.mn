@@ -21,7 +21,7 @@ I bet you, like me, have looked at an image and wondered what it would look like
 First, we'll need a program to run our code.  I'm going to create a new .NET 6.0 project and then add ImageSharp.
 
 ```powershell
-dotnet new console
+>dotnet new console
 ```
 
 ```powershell

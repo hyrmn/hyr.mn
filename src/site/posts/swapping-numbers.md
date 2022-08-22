@@ -43,12 +43,18 @@ int y = 20;
 ```
 
 The computer sees
-```
+
+```csharp
 x = 0000 1010
 y = 0001 0100
 ```
 
-The rules for [XOR](https://en.wikipedia.org/wiki/XOR_gate) are that it's true when one of the values is true and false if both values are the same (so 1 XOR 0 is 1, 1 XOR 1 and 0 XOR 0 are 0).
+The rules for [XOR](https://en.wikipedia.org/wiki/XOR_gate) are that it's true when one of the values is true and false if both values are the same. 
+
+This means that: 
+1 XOR 0 is 1;
+1 XOR 1 is 0;
+and 0 XOR 0 is 0.
 
 Let's step through the code and see what happens under the covers
 
