@@ -18,7 +18,18 @@ module.exports = {
       green: colors.green,
       yellow: colors.amber,
     },
-  
+    typography: {
+      default: {
+          css: {
+              'code::before': {
+                  content: "",
+              },
+              'code::after': {
+                  content: "",
+              },
+          },
+      },
+    },    
     extend: {
       screens: {
         'print': {'raw': 'print'},
