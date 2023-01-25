@@ -18,7 +18,7 @@ So, the edict comes down to our boss, Wade, that someone on the team has to be s
 
 We were informed of this fact in our team meeting. We all volunteered to take a 2 (aside, getting scored less than a 3 had a very material impact on raises and bonuses; we were all willing to forego a lot of money in the name of solidarity). Back up the chain the message went. "You're team can't all be 2's!" was the answer that came back.
 
-I decided I wouldn't mine being the sole 2 on the team. 
+I decided I wouldn't mind being the sole 2 on the team. 
 
 Back up the chain with the word that I'd be taking the 2. "Ben can't be a 2!" was the response.
 
