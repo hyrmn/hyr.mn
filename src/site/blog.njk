@@ -4,11 +4,8 @@ title: Writing about software and other curiosities
 ---
 
 <div class="w-full p-2 bg-gray-200 rounded shadow-lg bg-gray-100 dark:bg-gray-900">
-  <div class="border-b-2 border-gray-500 text-2xl text-blue-900 dark:text-gray-50 font-semibold">Blog Posts</div>
-  <div class="text-lg text-gray-700 dark:text-gray-400">Software, Development, Life</div>
-
 {%- for entry in collections.blogentries | reverse -%}
-    <section class="mt-6">
+    <section class="mb-6">
         <h4 class="text-lg font-bold"><a href="{{ entry.url }}">{{ entry.data.title }}</a></h4>
         <time value="{{ entry.date }}" class="text-gray-600">{{ entry.date | entryDate }}</time>
         <div>

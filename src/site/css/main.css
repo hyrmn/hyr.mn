@@ -1,61 +1,74 @@
 @tailwind base;
-a {
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  h2 {
+    @apply mt-4;
+    @apply font-semibold;
+  }
+
+  p {
+    @apply mb-4;
+  }
+
+  a {
     @apply text-blue-400;
     @apply underline;
   }
 
-a:hover,
-a:focus {
-  @apply text-yellow-700;
-} 
+  a:hover,
+  a:focus {
+    @apply text-yellow-700;
+  }
 
-code {
-  @apply text-sm;
-  @apply rounded;
+  code {
+    @apply text-sm;
+    @apply rounded;
+  }
+
+  blockquote {
+    @apply border-l-4;
+    @apply border-gray-500;
+    @apply block;
+    @apply pl-2;
+  }
 }
 
-blockquote {
-  @apply border-l-4;
-  @apply border-gray-500;
-  @apply block;
-  @apply pl-2;
-}
+@layer components {
+  .nav-link {
+    @apply block;
+    @apply font-semibold;
+    @apply px-3;
+    @apply border-b-2;
+    @apply border-gray-100;
+    @apply no-underline;
+  }
 
-.nav-link {
-  @apply block;
-  @apply font-semibold;
-  @apply px-3;
-  @apply border-b-2;
-  @apply border-gray-100;
-  @apply no-underline;
-}
+  .nav-link.active {
+    @apply font-bold;
+    @apply border-blue-500;
+  }
 
-.nav-link.active  {
-  @apply font-bold;
-  @apply border-blue-500;
-}
+  .nav-link:hover {
+    @apply text-blue-500;
+    @apply border-b-2;
+    @apply border-blue-800;
+  }
 
-.nav-link:hover {
-  @apply text-blue-500;
-  @apply border-b-2;
-  @apply border-blue-800;
-}
+  .nav-link-social {
+    @apply inline-block;
+    @apply font-semibold;
+    @apply border-b-0;
+    @apply w-6;
+    @apply mr-4;
+  }
 
-.nav-link-social {
-  @apply inline-block;
-  @apply font-semibold;
-  @apply border-b-0;
-  @apply w-6;
-  @apply mr-4;
-  @apply text-gray-900;
-}
-
-.dark .nav-link-social {
-  @apply text-white;
-}
-
-.nav-link-social:hover {
-  @apply text-blue-500;
+  .prose ul {
+    @apply list-disc;
+    @apply pl-8;
+  }
 }
 
 .visually-hidden {
@@ -64,16 +77,15 @@ blockquote {
   font-style: normal;
   margin-left: .1em;
 }
+
 a[href].visually-hidden,
 a[href].visually-hidden:visited {
   color: transparent;
 }
+
 a[href].visually-hidden:focus,
 a[href].visually-hidden:focus:visited,
-:hover > a[href].visually-hidden,
-:hover > a[href].visually-hidden:visited {
+:hover>a[href].visually-hidden,
+:hover>a[href].visually-hidden:visited {
   color: #aaa;
-}
-
-@tailwind components;
-@tailwind utilities;
+}     

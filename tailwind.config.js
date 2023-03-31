@@ -40,19 +40,6 @@ module.exports = {
       },
       typography(theme) {
         return {
-          DEFAULT: {
-            css: {
-              h1: {
-                marginBottom: 0,
-              },
-              h2: {
-                margin: 0,
-              },
-              h3: {
-                margin: 0,
-              }
-            }
-          },
           dark: {
             css: {
               color: theme("colors.gray.300"),
