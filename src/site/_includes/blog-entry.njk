@@ -7,7 +7,7 @@ pageClass: posts
   <h1 class="border-b-2 border-gray-500 text-2xl font-semibold mt-2">{{ title }}</h1>
   <time value="{{ entry.date }}" class="block text-lg text-gray-700 mb-4">{{ date | entryDate }}</time>
   
-  <div class="mb-4 text-lg font-medium">
+  <div class="mb-4 text-lg">
     {{ content | safe }}
   </div>
 </article>

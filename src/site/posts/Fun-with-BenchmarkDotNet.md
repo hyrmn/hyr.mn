@@ -94,7 +94,7 @@ But, this has a glaring problem that [Aaron Dandy](https://twitter.com/adandy_) 
 
 But, this part of the journey is to keep some brainstorming ideas going. We don't have our pragmatic hat on so we don't care about memory!
 
-On to a couple of more elegant ideas propsed by David...
+On to a couple of more elegant ideas proposed by David...
 
 First, if we're fairly sure that we will often see many requests for the same value at once, we can implement a poor cache. Just track what we've seen last and use that if it matches.
 
