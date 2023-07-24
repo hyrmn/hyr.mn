@@ -15,21 +15,6 @@ title: Writing about software and other curiosities
     
 </p>
 
-<div class="mb-6 text-xl">
-    <p class="mb-6">Of course, coming here to read isn't always convenient. I also have an <a href="/feed.xml">RSS feed</a> or you can sign up for my mailing list. You'll get each new post in your mailbox and nothing else.</p>
-    <form action="/api/sign-up" hx-get="/api/sign-up" hx-swap="innerHTML" method="get" class="mb-8 sm:max-w-lg sm:w-full sm:flex" _="on htmx:responseError put 'There was an error signing you up' into me">
-        <div class="min-w-0 flex-1">
-            <label for="email" class="sr-only">Email address</label>
-            <input name="email" id="email" type="email" class="block w-full border border-gray-300 rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:border-blue-500 focus:ring-blue-500" placeholder="Enter your email">
-        </div>
-        <div class="sm:mt-0 sm:ml-3">
-            <button type="submit"
-            class="block w-full rounded-md border border-transparent px-5 py-3 bg-blue-500 text-base font-medium text-white shadow hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:px-10" 
-            _="on click transition opacity to 0 then remove me">Subscribe</button>
-        </div>
-    </form>
-</div>
-
 <div class="w-full p-2 bg-gray-200 dark:bg-gray-900 rounded">
   <div class="border-b-2 border-gray-500 text-2xl text-blue-900 dark:text-gray-50 font-semibold">Spotlight</div>
   <div class="text-lg text-gray-700 dark:text-gray-400">Some of my favorite posts</div>  
