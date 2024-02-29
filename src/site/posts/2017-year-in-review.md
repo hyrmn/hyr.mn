@@ -12,7 +12,7 @@ I thought it would be useful, for myself, to reflect back on 2017. I haven't wri
 
 ## 2016
 
-2016 kicked off what turned into an interesting 2017 for us. 2016 started with a lot of grief as we lost our dog, Bandit. I've written about [life with an aging dog](/on-pets) before. Shortly after that, we decided we had to get out of the house and travel for a bit (we both worked remote at the time). That led us west to Denver where we stopped in to visit coworkers and then off to see family in Arizona. We settled in Denver for a few months before finally realizing our goal of living abroad. We moved to the Netherlands in October!
+2016 kicked off what turned into an interesting 2017 for us. 2016 started with a lot of grief as we lost our dog, Bandit. I've written about [life with an aging dog](on-pets) before. Shortly after that, we decided we had to get out of the house and travel for a bit (we both worked remote at the time). That led us west to Denver where we stopped in to visit coworkers and then off to see family in Arizona. We settled in Denver for a few months before finally realizing our goal of living abroad. We moved to the Netherlands in October!
 
 If you're an American and want to experience life as an expat, I highly recommend the Netherlands. I tell people that it's expat life with training wheels. The government's process is streamlined (they have an expatcenter in The Hague so that you have a one-stop shop for all paperwork and registration as well as a helpdesk staffed by volunteer expats). Plus, the people are friendly and willing to help and, in the cities at least, everyone has a strong command of English. While you should learn Dutch and absorb Dutch culture, you won't feel like you'll drown in the meantime.
 
