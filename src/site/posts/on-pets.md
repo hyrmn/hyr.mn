@@ -41,4 +41,5 @@ I knew this phase of dog ownership was coming. I was smart enough to understand 
 
 And it's been worth it every day.
 
-![Our dog Bandit with one of his favorite toys](/img/bandog.jpg)
+![](../img/c8b33e944852ec2b0cf8c57af4e178dc.jpg)
+
