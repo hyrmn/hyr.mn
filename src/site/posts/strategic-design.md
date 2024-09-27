@@ -44,7 +44,7 @@ One of the challenges with delivering a solution is understanding the current pr
 
 > Put Like With Like
 
- — literally every organizational design book ever
+ — literally every organization book ever
 
 A Bounded Context is a way to group the common things together within a team or function. It's very hard to get it right the first time and you likely will iterate in several sessions with your stakeholders before boundaries crystalize. One tip from Vaughn Vernon is that a Bounded Context is a linguistic boundary. That is, the terms and language within a Bounded Context are consistent.
 
