@@ -77,4 +77,4 @@ get a svelte(?) final image with just our assets and runtime and none of the bui
 
 Including a Node.js Docker image as a base part of your build might be old hat, but I hadn't seen any examples of it. I wanted to document what I learned in case it helped anyone else down the road. I, personally, think it's a pretty clean way to assemble an app for deployment.
 
-If you have any questions, comments or complaints, you can always DM or tweet me [@hyrmn](https://twitter.com/hyrmn)
+If you have any questions, comments or complaints, you can always DM or skeet me [@hyrmn](https://bsky.app/profile/hyr.mn)

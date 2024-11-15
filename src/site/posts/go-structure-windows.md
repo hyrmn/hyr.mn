@@ -143,4 +143,4 @@ Now that you have that fancy executable sitting in that bin directory, you shoul
 
 ## Wrapping Up
 
-If you are starting out in Go, and if 1.13, or the changes it introduced, are still current when you read this, then I hope you find it helpful. Feel free to ping me on Twitter [@hyrmn](https://twitter.com/hyrmn) with any questions.
+If you are starting out in Go, and if 1.13, or the changes it introduced, are still current when you read this, then I hope you find it helpful. Feel free to ping me on Bluesky [@hyrmn](https://bsky.app/profile/hyr.mn) with any questions.

@@ -247,4 +247,4 @@ I've <a href="/go-structure-windows/">previously covered</a> how I set Go up loc
 
 Honestly, thinking up bespoke little utilities has been a lot of fun. And, once you unlock the power of chaining them together, you'll think of many new use cases. Just keep the Unix philosophy in mind.
 
-Feel free to ping me on Twitter <a href="https://twitter.com/hyrmn">@hyrmn</a> with any questions or comments.
+Feel free to ping me on Bluesky [@hyrmn](https://bsky.app/profile/hyr.mn) with any questions or comments.

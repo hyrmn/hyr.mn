@@ -82,4 +82,4 @@ public async Task UpsertPerson(string firstName, string lastName)
 }
 ```
 
-Again, the full code for the above classes can be found on [this Gist](https://gist.github.com/hyrmn/ce124e9b1f50dbf9d241390ebc8f6df3). Any questions or complaints, hit me up on Twitter [@hyrmn](https://twitter.com/hyrmn)
+Again, the full code for the above classes can be found on [this Gist](https://gist.github.com/hyrmn/ce124e9b1f50dbf9d241390ebc8f6df3). Any questions or complaints, hit me up on Bluesky [@hyrmn](https://bsky.app/profile/hyr.mn)

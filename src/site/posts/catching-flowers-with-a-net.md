@@ -215,4 +215,4 @@ I haven't demonstrated any tests for this program. I'll leave you to <a href="ht
 
 Contrasting .NET and Go with a small utility like this has been fun and interesting. The new developments with .NET Core and C# have been exciting to watch and playing with the new Span class has been great. I would be hard-pressed to reach for .NET over Go for a utility like this though. But, I think I could easily say the inverse for other problem spaces.
 
-Feel free to ping me on Twitter <a href="https://twitter.com/hyrmn">@hyrmn</a> with any questions or comments.
+Feel free to ping me on Bluesky [@hyrmn](https://bsky.app/profile/hyr.mn) with any questions or comments.
