@@ -119,4 +119,4 @@ This will create a retry policy where the initial wait will be close to the firs
 
 This is where the magic of the WaitAndRetry helpers really shines. While it's awesome for communicating intent with the simpler use cases like in my example of `Backoff.LinearBackoff`, it's downright amazing with the addition of the decorrelated jitter policy. [George Polevoy](https://twitter.com/georgepolevoy), the author of the decorrelation approach, put a lot of hard thinking into this and it really shows. Frankly, I don't have the knowledge to have come up with it myself, but I do have the knowledge to easily take advantage of it thanks to the packaging provided by [Dylan Reisenberger](https://twitter.com/softwarereisen) and [Grant Dickinson](https://github.com/grant-d). 
 
-Again, the full code for the above blog snippits can be found on [this Gist](https://gist.github.com/hyrmn/a5227ed08923f3d14bab7736a9683c24). Any questions or complaints, hit me up on Bluesky [@hyrmn](https://bsky.app/profile/hyr.mn)
+Again, the full code for the above blog snippits can be found on [this Gist](https://gist.github.com/hyrmn/a5227ed08923f3d14bab7736a9683c24). 
