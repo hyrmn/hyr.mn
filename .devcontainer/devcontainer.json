@@ -1,28 +1,23 @@
 {
-    "name": "Node.js",
-    "image": "mcr.microsoft.com/devcontainers/javascript-node:24",
-    "features": {
-        "ghcr.io/r3dpoint/devcontainer-features/tailwindcss-standalone-cli:1": {
-            "version": "latest"
-        }
-    },
-    "forwardPorts": [
-        8080
-    ],
-    "portsAttributes": {
-        "8080": {
-            "label": "Eleventy Server",
-            "onAutoForward": "openBrowser"
-        }
-    },
-    "updateContentCommand": "npm install",
-    "waitFor": "updateContentCommand",
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "dbaeumer.vscode-eslint",
-                "esbenp.prettier-vscode"
-            ]
-        }
+  "name": "Node.js",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:24",
+  "features": {
+    "ghcr.io/r3dpoint/devcontainer-features/tailwindcss-standalone-cli:1": {},
+    "ghcr.io/devcontainer-community/devcontainer-features/opencode.ai:1": {},
+    "ghcr.io/devcontainer-community/devcontainer-features/lazygit:1": {}
+  },
+  "forwardPorts": [8080],
+  "portsAttributes": {
+    "8080": {
+      "label": "Eleventy Server",
+      "onAutoForward": "openBrowser"
     }
+  },
+  "updateContentCommand": "npm install",
+  "waitFor": "updateContentCommand",
+  "customizations": {
+    "vscode": {
+      "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+    }
+  }
 }

@@ -1,5 +1,15 @@
 {
   "features": {
+    "ghcr.io/devcontainer-community/devcontainer-features/lazygit:1": {
+      "version": "1.0.2",
+      "resolved": "ghcr.io/devcontainer-community/devcontainer-features/lazygit@sha256:a9a4b920a615d869bd12149f0430957d496883415b3b436d8948c487e4eb3567",
+      "integrity": "sha256:a9a4b920a615d869bd12149f0430957d496883415b3b436d8948c487e4eb3567"
+    },
+    "ghcr.io/devcontainer-community/devcontainer-features/opencode.ai:1": {
+      "version": "1.0.7",
+      "resolved": "ghcr.io/devcontainer-community/devcontainer-features/opencode.ai@sha256:312520e651f8438c67d6823464fffaf42449e1e05e7020ef721748a4a95fa1fb",
+      "integrity": "sha256:312520e651f8438c67d6823464fffaf42449e1e05e7020ef721748a4a95fa1fb"
+    },
     "ghcr.io/r3dpoint/devcontainer-features/tailwindcss-standalone-cli:1": {
       "version": "1.0.1",
       "resolved": "ghcr.io/r3dpoint/devcontainer-features/tailwindcss-standalone-cli@sha256:b2b60737e993bf9b6c74838520111469a2f27e9d0ba648b8c4dc7d3ed38fdfe0",
