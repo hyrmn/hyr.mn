@@ -21,7 +21,7 @@
   <subtitle>Think About Things</subtitle>
   <link href="https://hyr.mn/feed.xml" rel="self"/>
   <link href="https://hyr.mn"/>
-  <updated>{{ collections.blogentries | rssLastUpdatedDate }}</updated>
+  <updated>{{ collections.blogentries | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>https://hyr.mn</id>
   <author>
     <name>{{ metadata.author.name }}</name>
@@ -33,7 +33,7 @@
   <entry>
     <title>{{ entry.data.title }}</title>
     <link href="{{ absolutePostUrl }}"/>
-    <updated>{{ entry.date | rssDate }}</updated>
+    <updated>{{ entry.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
     <content type="html">{{ entry.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
   </entry>

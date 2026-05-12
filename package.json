@@ -7,8 +7,7 @@
     "clean": "rimraf ./dist/",
     "build": "eleventy",
     "build-prod": "cross-env NODE_ENV=production npm run clean && npm run build",
-    "watch": "eleventy --serve --port=8080",
-    "start": "netlify dev"
+    "watch": "eleventy --serve --port=8080"
   },
   "repository": {
     "type": "git",
@@ -22,19 +21,18 @@
   },
   "homepage": "https://github.com/hyrmn/hyr.mn#readme",
   "dependencies": {
-    "@11ty/eleventy": "^1.0.1",
-    "@11ty/eleventy-plugin-rss": "^1.2.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
-    "@tailwindcss/typography": "^0.5.4",
-    "axios": "^0.22.0",
-    "cross-env": "^7.0.3",
-    "luxon": "^3.2.1",
-    "markdown-it": "^13.0.1",
-    "markdown-it-anchor": "^8.6.4",
-    "netlify-cli": "^10.9.0",
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-plugin-rss": "^2.0.4",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+    "@tailwindcss/typography": "^0.5.19",
+    "axios": "^1.11.0",
+    "cross-env": "^10.0.0",
+    "luxon": "^3.7.1",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.2.0",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.3.8",
-    "rimraf": "^3.0.2",
-    "tailwindcss": "^3.1.6"
+    "postcss": "^8.5.6",
+    "rimraf": "^6.0.1",
+    "tailwindcss": "^3.4.17"
   }
 }
