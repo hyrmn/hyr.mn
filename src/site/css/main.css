@@ -1,6 +1,66 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@config '../../../tailwind.config.js';
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility nav-link {
+  @apply block;
+  @apply font-semibold;
+  @apply px-3;
+  @apply border-b-2;
+  @apply border-gray-100;
+  @apply no-underline;
+
+  &.active {
+    @apply font-bold;
+    @apply border-blue-500;
+  }
+
+  &:hover {
+    @apply text-blue-500;
+    @apply border-b-2;
+    @apply border-blue-800;
+  }
+}
+
+@utility active {
+  &.nav-link {
+    @apply font-bold;
+    @apply border-blue-500;
+  }
+}
+
+@utility nav-link-social {
+  @apply inline-block;
+  @apply font-semibold;
+  @apply border-b-0;
+  @apply w-6;
+  @apply mr-4;
+}
+
+@utility prose {
+  & ul {
+    @apply list-disc;
+    @apply pl-8;
+  }
+}
 
 @layer base {
 
@@ -25,7 +85,7 @@
 
   code {
     @apply text-sm;
-    @apply rounded;
+    @apply rounded-sm;
   }
 
   blockquote {
@@ -33,41 +93,6 @@
     @apply border-gray-500;
     @apply block;
     @apply pl-2;
-  }
-}
-
-@layer components {
-  .nav-link {
-    @apply block;
-    @apply font-semibold;
-    @apply px-3;
-    @apply border-b-2;
-    @apply border-gray-100;
-    @apply no-underline;
-  }
-
-  .nav-link.active {
-    @apply font-bold;
-    @apply border-blue-500;
-  }
-
-  .nav-link:hover {
-    @apply text-blue-500;
-    @apply border-b-2;
-    @apply border-blue-800;
-  }
-
-  .nav-link-social {
-    @apply inline-block;
-    @apply font-semibold;
-    @apply border-b-0;
-    @apply w-6;
-    @apply mr-4;
-  }
-
-  .prose ul {
-    @apply list-disc;
-    @apply pl-8;
   }
 }
 

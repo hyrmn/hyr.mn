@@ -36,6 +36,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./src/site/css')
   eleventyConfig.addWatchTarget('./tailwind.config.js')
 
+  eleventyConfig.addTemplateFormats('11ty.js')
+
   eleventyConfig.addPassthroughCopy("./src/site/img");
   eleventyConfig.addPassthroughCopy("./src/site/css/prism.css");
   eleventyConfig.addPassthroughCopy("./src/site/favicon.ico");

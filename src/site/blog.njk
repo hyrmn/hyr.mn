@@ -3,7 +3,7 @@ layout: layout.njk
 title: Writing about software and other curiosities
 ---
 
-<div class="w-full p-2 bg-gray-200 rounded shadow-lg bg-gray-100 dark:bg-gray-900">
+<div class="w-full p-2 bg-gray-200 rounded-sm shadow-lg bg-gray-100 dark:bg-gray-900">
 {%- for entry in collections.blogentries | reverse -%}
     <section class="mb-6">
         <h4 class="text-lg font-bold"><a href="{{ entry.url }}">{{ entry.data.title }}</a></h4>

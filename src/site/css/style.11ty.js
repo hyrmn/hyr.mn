@@ -7,16 +7,17 @@ module.exports = class {
     const filepath = path.join(__dirname, 'main.css')
     return {
       permalink: "/css/site.css",
-      content: await fs.readFileSync(filepath),
+      rawCss: await fs.readFileSync(filepath, 'utf8'),
       eleventyExcludeFromCollections: true,      
     };
   }
 
-  async render({ content }) { 
+  async render({ rawCss }) { 
+    const filepath = path.join(__dirname, 'main.css')
     return await postcss([
-      require('tailwindcss')('./tailwind.config.js'),
+      require('@tailwindcss/postcss'),
     ])
-    .process(content)
+    .process(rawCss, { from: filepath })
     .then((result) => result.css)
   }
 }
