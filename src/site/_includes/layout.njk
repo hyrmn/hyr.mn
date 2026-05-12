@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="{{ eleventy.generator }}">
-    
+
     <link rel="preload" href="/css/site.css" as="style">
     <link rel="stylesheet" href="/css/site.css">
     <link rel="stylesheet" href="/css/prism.css">
@@ -16,57 +16,46 @@
 
     <script defer src="https://kit.fontawesome.com/1ac284761b.js" crossorigin="anonymous"></script>
   </head>
-  <body class="p-6 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white">
+  <body class="bg-white dark:bg-stone-950 text-stone-800 dark:text-stone-200">
 
-    <header class="container max-w-5xl mx-auto pt-5 border-b-2 print:hidden">
-        <div class="flex flex-wrap -mx-2 overflow-hidden lg:px-0">
+    <header class="max-w-3xl mx-auto px-6 py-6 border-b border-stone-200 dark:border-stone-800 print:hidden">
+        <div class="flex items-center justify-between">
+            <a href="/" class="font-bold text-xl tracking-tight text-stone-900 dark:text-stone-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Ben Hyrman</a>
 
-            <div class="px-2 w-1/3 overflow-hidden text-center md:text-left">
-                <h1 class="font-bold text-2xl text-grey-900">Ben Hyrman</h1>
-            </div>
-
-            <nav class="my-2 px-2 w-1/3 overflow-hiddentext-center md:text-left">
-                <ul>
-                  <li class="inline-block">
-                    <a class="nav-link {% if page.url === '/' %} active {% endif %}" href="/">Home</a>
-                  </li>
-                  <li class="inline-block">
-                    <a class="nav-link {% if page.url === '/blog/' %} active {% endif %}" href="/blog/">Blog</a>
-                  </li>
-                  <li class="inline-block">
-                    <a class="nav-link {% if page.url === '/projects/' %} active {% endif %}" href="/projects/">Projects</a>
-                  </li>
+            <nav>
+                <ul class="flex items-center gap-6">
+                  <li><a class="text-sm font-medium text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors {% if page.url === '/' %}text-stone-900 dark:text-stone-100{% endif %}" href="/">Home</a></li>
+                  <li><a class="text-sm font-medium text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors {% if page.url === '/blog/' %}text-stone-900 dark:text-stone-100{% endif %}" href="/blog/">Blog</a></li>
+                  <li><a class="text-sm font-medium text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors {% if page.url === '/projects/' %}text-stone-900 dark:text-stone-100{% endif %}" href="/projects/">Projects</a></li>
                 </ul>
             </nav>
-          
-            <div class="w-1/3 overflow-hidden text-center md:text-right">
-              <a href="https://github.com/hyrmn" title="GitHub" class="nav-link-social" target="offsite">
-                  <i class="fa-brands fa-github fa-2x text-gray-900 dark:text-gray-100 hover:text-blue-500"></i>
+
+            <div class="flex items-center gap-4">
+              <a href="https://github.com/hyrmn" title="GitHub" class="text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 transition-colors" target="offsite">
+                  <i class="fa-brands fa-github"></i>
               </a>
-              <a href="https://linkedin.com/in/benhyrman" title="LinkedIn" class="nav-link-social" target="offsite">
-                  <i class="fa-brands fa-linkedin fa-2x text-gray-900 dark:text-gray-100 hover:text-blue-500"></i>
+              <a href="https://linkedin.com/in/benhyrman" title="LinkedIn" class="text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 transition-colors" target="offsite">
+                  <i class="fa-brands fa-linkedin"></i>
               </a>
-              <a href="https://www.flickr.com/photos/benhyr" title="Flickr" class="nav-link-social" target="offsite">
-                  <i class="fa-brands fa-flickr fa-2x text-gray-900 dark:text-gray-100 hover:text-blue-500"></i>
+              <a href="https://www.flickr.com/photos/benhyr" title="Flickr" class="text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 transition-colors" target="offsite">
+                  <i class="fa-brands fa-flickr"></i>
+              </a>
+              <a href="/feed.xml" title="RSS" class="text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 transition-colors">
+                  <i class="fa-solid fa-rss"></i>
               </a>
             </div>
-          
-          </div>
+        </div>
     </header>
 
-    <div class="container mx-auto mb-6">
-      <main class="max-w-5xl mx-auto pt-2 pb-2">
+    <div class="max-w-3xl mx-auto px-6 py-8">
+      <main>
         {{ content | safe }}
       </main>
     </div>
 
-    <footer class="container max-w-5xl mx-auto pt-5 border-dashed border-gray-500 border-t-2 mb-6 dark:text-gray-300 print:hidden">
-        <ul>
-            <li>&copy; 2006 - 2021 &mdash; Ben Hyrman
-            <li>Writing and website design is <a href="https://github.com/hyrmn/hyr.mn">available on GitHub</a> and licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-            <li>Icons are copyright <a href="https://fontawesome.com">Font Awesome</a> and licensed under a <a rel="license" href="https://fontawesome.com/license/free">Creative Commons BY 4.0 International License</a>
-        </ul>
+    <footer class="max-w-3xl mx-auto px-6 pb-8 border-t border-stone-200 dark:border-stone-800 print:hidden">
+        <p class="text-xs text-stone-400 dark:text-stone-600 mt-6">&copy; Ben Hyrman &middot; <a href="https://github.com/hyrmn/hyr.mn" class="hover:text-stone-600 dark:hover:text-stone-400">Source</a> &middot; <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" class="hover:text-stone-600 dark:hover:text-stone-400">CC BY-SA 4.0</a></p>
     </footer>
-    
+
   </body>
 </html>

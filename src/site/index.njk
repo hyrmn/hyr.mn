@@ -1,118 +1,83 @@
 ---
 layout: layout.njk
-title: Writing about software and other curiosities
+title: Ben Hyrman
 ---
 
-<p class="mb-6 mt-6 text-2xl font-semibold">Hi.</p>
+<div class="space-y-4 mb-12">
+  <p class="text-2xl font-semibold text-stone-900 dark:text-stone-100">Hi.</p>
+  <p class="text-lg text-stone-600 dark:text-stone-400 leading-relaxed">My name is Ben Hyrman. I'm a software developer with a passion for shipping products.</p>
+  <p class="text-lg text-stone-600 dark:text-stone-400 leading-relaxed">I love working with others. For me, development is a team sport. We go further when we go together.</p>
+  <p class="text-lg text-stone-600 dark:text-stone-400 leading-relaxed">I <a href="/blog">write here</a>; mostly about what I'm learning or working on. I occasionally write about personal things as well.</p>
+</div>
 
-<p class="mb-6 text-xl">My name is Ben Hyrman. I'm a software developer with a passion for shipping products.</p>
+<div class="mb-12">
+  <h2 class="text-sm font-semibold uppercase tracking-wider text-stone-400 dark:text-stone-500 mb-6">Featured posts</h2>
 
-<p class="mb-6 text-xl">I love working with others. For me, development is a team sport. We go further when we go together.</p>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-<p class="mb-6 text-xl">I <a href="/blog">write here</a>; mostly about what I'm learning or working on. I occasionally write about personal things as well.</p>
+    <a href="/14-years" class="group block border border-stone-200 dark:border-stone-800 rounded-lg overflow-hidden hover:border-stone-300 dark:hover:border-stone-700 transition-colors">
+      <img class="w-full h-40 object-cover" src="/img/card_kayakingonlakesuperior.jpg" alt="Kayaking on Lake Superior">
+      <div class="p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">14 Years</h3>
+        <p class="text-sm text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Fourteen years ago, we stood in front of a judge and made a promise to each other.</p>
+      </div>
+    </a>
 
-<p class="mb-6 text-xl">
-    
-</p>
+    <a href="/on-pets" class="group block border border-stone-200 dark:border-stone-800 rounded-lg overflow-hidden hover:border-stone-300 dark:hover:border-stone-700 transition-colors">
+      <img class="w-full h-40 object-cover" src="/img/card_bandog.jpg" alt="Bandit the Dog">
+      <div class="p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">On Pets</h3>
+        <p class="text-sm text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Reflections on 14 years with our furry companion</p>
+      </div>
+    </a>
 
-<div class="w-full p-2 bg-gray-200 dark:bg-gray-900 rounded-sm">
-  <div class="border-b-2 border-gray-500 text-2xl text-blue-900 dark:text-gray-50 font-semibold">Spotlight</div>
-  <div class="text-lg text-gray-700 dark:text-gray-400">Some of my favorite posts</div>  
-  
-  <div class="flex flex-wrap p-2">
+    <a href="/Polly-wait-and-retry" class="group block border border-stone-200 dark:border-stone-800 rounded-lg overflow-hidden hover:border-stone-300 dark:hover:border-stone-700 transition-colors">
+      <div class="h-20 bg-amber-500 flex items-center justify-center">
+        <i class="fas fa-bezier-curve fa-2x text-white"></i>
+      </div>
+      <div class="p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Polly WaitAndRetry</h3>
+        <p class="text-sm text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Patterns and practices for wrapping .NET code in wait-and-retry blocks when making remote calls</p>
+      </div>
+    </a>
 
-    <div class="relative w-64 mr-6 mt-6 rounded-sm overflow-hidden dark:border-4 dark:border-gray-700 shadow-lg bg-gray-100 dark:bg-gray-900">
-        <img class="w-full" src="/img/card_kayakingonlakesuperior.jpg" alt="Kayaking on Lake Superior">
-        <div class="px-6 py-4 h-48">
-            <div class="font-bold text-xl mb-2">14 Years</div>
-            <p class="text-gray-700 text-base dark:text-gray-400">
-                Fourteen years ago, we stood in front of a judge and made a promise to each other. 
-            </p>
-        </div>
-        <div class="absolute right-0 bottom-0 inline-block px-6 py-4">
-            <a href="/14-years">Read &#8594;</a>
-        </div>
-    </div>
+    <a href="/application-oddities" class="group block border border-stone-200 dark:border-stone-800 rounded-lg overflow-hidden hover:border-stone-300 dark:hover:border-stone-700 transition-colors">
+      <div class="h-20 bg-blue-500 flex items-center justify-center">
+        <i class="fas fa-network-wired fa-2x text-white"></i>
+      </div>
+      <div class="p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Living with your creations</h3>
+        <p class="text-sm text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Lessons learned from a long-lived product</p>
+      </div>
+    </a>
 
-    <div class="relative w-64 mt-6 rounded-sm overflow-hidden dark:border-4 dark:border-gray-700 shadow-lg bg-gray-100 dark:bg-gray-900">
-        <img class="w-full" src="/img/card_bandog.jpg" alt="Bandit the Dog">
-        <div class="px-6 py-4 h-48">
-            <div class="font-bold text-xl mb-2">On Pets</div>
-            <p class="text-gray-700 text-base dark:text-gray-400">
-                Reflections on 14 years with our furry companion
-            </p>
-        </div>
-        <div class="absolute right-0 bottom-0 inline-block px-6 py-4">
-            <a href="/on-pets">Read &#8594;</a>
-        </div>
-    </div>
-
-  </div>
-
-  <div class="flex flex-wrap p-2">
-
-    <div class="relative w-64 mr-6 mt-6 rounded-sm overflow-hidden dark:border-4 dark:border-gray-700 shadow-lg bg-gray-100 dark:bg-gray-900">
-        <div class="flex items-center h-20 bg-yellow-500">
-            <i class="fas fa-bezier-curve fa-3x mx-auto text-white"></i>
-        </div>
-        <div class="px-6 py-4 h-48">
-            <div class="font-bold text-xl mb-2">Polly WaitAndRetry</div>
-            <p class="text-gray-700 text-base dark:text-gray-400">
-                Patterns and practices for wrapping .NET code in wait-and-retry blocks when making remote calls
-            </p>
-        </div>
-        <div class="absolute right-0 bottom-0 inline-block px-6 py-4">
-            <a href="/Polly-wait-and-retry">Read &#8594;</a>
-        </div>
-    </div>
-
-    <div class="relative w-64 mr-6 mt-6 rounded-sm overflow-hidden dark:border-4 dark:border-gray-700 shadow-lg bg-gray-100 dark:bg-gray-900">
-        <div class="flex items-center h-20 bg-blue-500">
-            <i class="fas fa-network-wired fa-3x mx-auto text-white"></i>
-        </div>
-        <div class="px-6 py-4 h-48">
-            <div class="font-bold text-xl mb-2">Living with your creations</div>
-            <p class="text-gray-700 text-base dark:text-gray-400">
-                Lessons learned from a long-lived product
-            </p>
-        </div>
-        <div class="absolute right-0 bottom-0 inline-block px-6 py-4">
-            <a href="/application-oddities">Read &#8594;</a>
-        </div>
-    </div>
-
-    <div class="relative w-64 mt-6 rounded-sm overflow-hidden dark:border-4 dark:border-gray-700 shadow-lg bg-gray-100 dark:bg-gray-900">
-        <div class="flex items-center h-20 bg-green-500">
-            <i class="fas fa-laptop-code fa-3x mx-auto text-white"></i>
-        </div>
-        <div class="px-6 py-4 h-48">
-            <div class="font-bold text-xl mb-2">BenchmarkDotNet</div>
-            <p class="text-gray-700 text-base dark:text-gray-400">
-                Let's profile some code! And see if we can figure out some great options for things that might matter
-            </p>
-        </div>
-        <div class="absolute right-0 bottom-0 inline-block px-6 py-4">
-            <a href="/Fun-with-BenchmarkDotNet">Read &#8594;</a>
-        </div>
-    </div>
+    <a href="/Fun-with-BenchmarkDotNet" class="group block border border-stone-200 dark:border-stone-800 rounded-lg overflow-hidden hover:border-stone-300 dark:hover:border-stone-700 transition-colors md:col-span-1">
+      <div class="h-20 bg-green-500 flex items-center justify-center">
+        <i class="fas fa-laptop-code fa-2x text-white"></i>
+      </div>
+      <div class="p-4">
+        <h3 class="font-semibold text-stone-900 dark:text-stone-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">BenchmarkDotNet</h3>
+        <p class="text-sm text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Let's profile some code! And see if we can figure out some great options for things that might matter</p>
+      </div>
+    </a>
 
   </div>
 </div>
 
-<br />
-<div class="w-full p-2 bg-gray-200 dark:bg-gray-900 rounded-sm">
-  <div class="border-b-2 border-gray-500 text-2xl text-blue-900 dark:text-gray-50 font-semibold">Recent</div>
-  <div class="text-lg text-gray-700 dark:text-gray-400">My newest blog entries</div>  
+<div>
+  <h2 class="text-sm font-semibold uppercase tracking-wider text-stone-400 dark:text-stone-500 mb-6">Recent posts</h2>
 
-  {%- for entry in collections.blogentries | reverse -%}
-  {%- if loop.index < 4 -%}
-<section class="mt-6">
-    <h4 class="text-lg font-bold"><a href="{{ entry.url }}">{{ entry.data.title }}</a></h4>
-    <time value="{{ entry.date }}" class="text-gray-600 dark:text-gray-400">{{ entry.date | entryDate }}</time>
-    <div>
-    {{ entry.data.description | safe }}
-    </div>
-</section>
-{%- endif -%}
-{%- endfor -%}
+  <div class="space-y-6">
+    {%- for entry in collections.blogentries | reverse -%}
+    {%- if loop.index < 6 -%}
+    <article>
+      <time class="text-sm font-mono text-stone-400 dark:text-stone-500">{{ entry.date | entryDate }}</time>
+      <h3 class="text-lg font-semibold mt-1"><a href="{{ entry.url }}" class="text-stone-900 dark:text-stone-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{{ entry.data.title }}</a></h3>
+      <p class="text-stone-500 dark:text-stone-400 mt-1">{{ entry.data.description | safe }}</p>
+    </article>
+    {%- endif -%}
+    {%- endfor -%}
+  </div>
+
+  <p class="mt-8"><a href="/blog/" class="text-sm font-medium text-stone-500 dark:text-stone-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">View all posts &rarr;</a></p>
 </div>

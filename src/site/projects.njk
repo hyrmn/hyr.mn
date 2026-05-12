@@ -1,61 +1,48 @@
 ---
 layout: layout.njk
-title: Projects for your amusement and consideration
+title: Projects
 ---
 
-<p class="mb-6 mt-6 text-xl">I love to learn by writing about something new; and I love to learn by making little toy applications. Below are some of my tinkerings where I've brought those two joys together. Hopefully they'll be useful to you in some fashion as well.
-</p>
-<p class="mb-6 mt-6 text-xl">
-Ideally, they're small. Likely, they exist because I wanted to learn something or illustrate a concept on its own. You may laugh at why I even bothered to make them. But, I had fun.
-</p>
+<h1 class="text-2xl font-bold text-stone-900 dark:text-stone-100 mb-2">Projects</h1>
+<p class="text-stone-500 dark:text-stone-400 mb-10">I love to learn by writing about something new; and I love to learn by making little toy applications. Below are some of my tinkerings.</p>
 
-<div class="w-full p-2 bg-gray-200 pb-4 rounded-sm dark:bg-gray-900">
-  <div class="border-b-2 border-gray-500 text-2xl text-blue-900 dark:text-gray-50 font-semibold">Projects</div>
+<div class="space-y-10">
 
-    <div class="w-full mt-6 rounded-sm overflow-hidden shadow-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-50">
-        <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">Counting Lines in Various Languages</div>
-            <p class="mb-6">
-                I was reflecting on <a href="https://en.wikipedia.org/wiki/Unix_philosophy">The Unix Philosophy</a> and it struck me that <code>wc</code> (a command-line utility that can count words, characters, and lines)
-                would be interesting to replace. But, unlike <code>wc</code>, I would only do one thing. Count lines. In writing my own utility, I could learn how to read input from the command line.
-            </p>
-            <p class="mb-6">
-                But, even better, I could rewrite the same utility in a few languages to get a sense for how various languages compare with a problem that is trivial but useful.
-            </p>
-            <ul class="mt-6">
-                <li><span>Go:</span> <a href="https://github.com/hyrmn/lc">Code</a> | <a href="/counting-flowers-on-the-wall">Blog Post</a>
-                <li><span>.NET Core:</span> <a href="https://github.com/hyrmn/nlc">Code</a> | <a href="/catching-flowers-with-a-net">Blog Post</a>
-            </ul>
-        </div>
+    <div class="border border-stone-200 dark:border-stone-800 rounded-lg p-6">
+        <h2 class="text-xl font-semibold text-stone-900 dark:text-stone-100 mb-3">Counting Lines in Various Languages</h2>
+        <p class="text-stone-600 dark:text-stone-400 mb-4">
+            I was reflecting on <a href="https://en.wikipedia.org/wiki/Unix_philosophy">The Unix Philosophy</a> and it struck me that <code>wc</code> (a command-line utility that can count words, characters, and lines)
+            would be interesting to replace. But, unlike <code>wc</code>, I would only do one thing. Count lines. In writing my own utility, I could learn how to read input from the command line.
+        </p>
+        <p class="text-stone-600 dark:text-stone-400 mb-4">
+            But, even better, I could rewrite the same utility in a few languages to get a sense for how various languages compare with a problem that is trivial but useful.
+        </p>
+        <ul class="flex gap-4 text-sm">
+            <li><span class="text-stone-400">Go:</span> <a href="https://github.com/hyrmn/lc">Code</a> | <a href="/counting-flowers-on-the-wall">Blog</a></li>
+            <li><span class="text-stone-400">.NET Core:</span> <a href="https://github.com/hyrmn/nlc">Code</a> | <a href="/catching-flowers-with-a-net">Blog</a></li>
+        </ul>
     </div>
 
-    <div class="w-full mt-6 rounded-sm overflow-hidden shadow-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-50">
-        <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">Joe Everyman's Reporting Konverter</div>
-            <p class="mb-6">
-                My buddy, Joe, wanted a way to get the output from a .NET solution's unit tests into a CSV. I decided to see if that was possible. Through that, I learned that you can tell `dotnet test` to output in a 
-                standard XML format. From there, I was able to use the XML deserialization to read the test results and then write them back out as CSV. 
-            </p>
-            <p class="mb-6">
-                This project is useful to see an approach for generating test output, using a glob-matching library for finding files during directory traversal, and processing XML files. It's all packaged as a .NET tool as well
-                and the GitHub actions show off how to do that packaging.
-            </p>
-            <p class="mb-6">
-                The code is available on GitHub at <a href="https://github.com/hyrmn/jerk">https://github.com/hyrmn/jerk</a>.
-            </p>
-        </div>
+    <div class="border border-stone-200 dark:border-stone-800 rounded-lg p-6">
+        <h2 class="text-xl font-semibold text-stone-900 dark:text-stone-100 mb-3">Joe Everyman's Reporting Konverter</h2>
+        <p class="text-stone-600 dark:text-stone-400 mb-4">
+            My buddy, Joe, wanted a way to get the output from a .NET solution's unit tests into a CSV. I decided to see if that was possible. Through that, I learned that you can tell `dotnet test` to output in a
+            standard XML format. From there, I was able to use the XML deserialization to read the test results and then write them back out as CSV.
+        </p>
+        <p class="text-stone-600 dark:text-stone-400 mb-4">
+            This project is useful to see an approach for generating test output, using a glob-matching library for finding files during directory traversal, and processing XML files. It's all packaged as a .NET tool as well
+            and the GitHub actions show off how to do that packaging.
+        </p>
+        <p class="text-sm"><a href="https://github.com/hyrmn/jerk">Code on GitHub &rarr;</a></p>
     </div>
 
-    <div class="w-full mt-6 rounded-sm overflow-hidden shadow-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-50">
-        <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">Generative Art Creator</div>
-            <p class="mb-6">
-                I've been playing with using algorithms to get computers to draw pretty pictures. Generative Art. Because I like the contrast of modern and retro, the UI for creating it all is a text-based UI that feels fresh 
-                out of the early 90's or late 80's.
-            </p>
-            <p class="mb-6">
-                The code is available on GitHub at <a href="https://github.com/hyrmn/gart">https://github.com/hyrmn/gart</a>.
-            </p>
-        </div>
+    <div class="border border-stone-200 dark:border-stone-800 rounded-lg p-6">
+        <h2 class="text-xl font-semibold text-stone-900 dark:text-stone-100 mb-3">Generative Art Creator</h2>
+        <p class="text-stone-600 dark:text-stone-400 mb-4">
+            I've been playing with using algorithms to get computers to draw pretty pictures. Generative Art. Because I like the contrast of modern and retro, the UI for creating it all is a text-based UI that feels fresh
+            out of the early 90's or late 80's.
+        </p>
+        <p class="text-sm"><a href="https://github.com/hyrmn/gart">Code on GitHub &rarr;</a></p>
     </div>
+
 </div>

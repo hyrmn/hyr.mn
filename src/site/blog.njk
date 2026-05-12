@@ -1,16 +1,28 @@
 ---
 layout: layout.njk
-title: Writing about software and other curiosities
+title: Blog
 ---
 
-<div class="w-full p-2 bg-gray-200 rounded-sm shadow-lg bg-gray-100 dark:bg-gray-900">
+<h1 class="text-2xl font-bold text-stone-900 dark:text-stone-100 mb-2">Blog</h1>
+<p class="text-stone-500 dark:text-stone-400 mb-10">Writing about software and other curiosities.</p>
+
+<div class="space-y-8">
 {%- for entry in collections.blogentries | reverse -%}
-    <section class="mb-6">
-        <h4 class="text-lg font-bold"><a href="{{ entry.url }}">{{ entry.data.title }}</a></h4>
-        <time value="{{ entry.date }}" class="text-gray-600">{{ entry.date | entryDate }}</time>
+    <article class="flex gap-6 group">
+        <time class="text-sm font-mono text-stone-400 dark:text-stone-500 whitespace-nowrap pt-1 w-32 shrink-0">{{ entry.date | entryDate }}</time>
         <div>
-        {{ entry.data.description | safe }}
+            <h3 class="text-lg font-semibold"><a href="{{ entry.url }}" class="text-stone-900 dark:text-stone-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{{ entry.data.title }}</a></h3>
+            <p class="text-stone-500 dark:text-stone-400 mt-1">{{ entry.data.description | safe }}</p>
+            {%- if entry.data.tags -%}
+            <div class="flex flex-wrap gap-2 mt-2">
+                {%- for tag in entry.data.tags -%}
+                {%- if tag !== "blogentries" -%}
+                <span class="text-xs px-2 py-0.5 rounded-full bg-stone-100 dark:bg-stone-800 text-stone-500 dark:text-stone-400">{{ tag }}</span>
+                {%- endif -%}
+                {%- endfor -%}
+            </div>
+            {%- endif -%}
         </div>
-    </section>
+    </article>
 {%- endfor -%}
 </div>

@@ -4,7 +4,7 @@ const colors = require('tailwindcss/colors')
 module.exports = {
   mode: 'jit',
   content: [
-    './src/**/*.njk',
+    './src/**/*.{njk,md}',
   ],
   darkMode: 'media', // false or 'media' or 'class',
   theme: {
@@ -13,10 +13,12 @@ module.exports = {
       current: 'currentColor',
       black: colors.black,
       white: colors.white,
+      stone: colors.stone,
       gray: colors.stone,
       blue: colors.blue,
       green: colors.green,
       yellow: colors.amber,
+      amber: colors.amber,
     },
     typography: {
       default: {

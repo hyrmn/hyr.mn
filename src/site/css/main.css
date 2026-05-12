@@ -16,49 +16,7 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
-}
-
-@utility nav-link {
-  @apply block;
-  @apply font-semibold;
-  @apply px-3;
-  @apply border-b-2;
-  @apply border-gray-100;
-  @apply no-underline;
-
-  &.active {
-    @apply font-bold;
-    @apply border-blue-500;
-  }
-
-  &:hover {
-    @apply text-blue-500;
-    @apply border-b-2;
-    @apply border-blue-800;
-  }
-}
-
-@utility active {
-  &.nav-link {
-    @apply font-bold;
-    @apply border-blue-500;
-  }
-}
-
-@utility nav-link-social {
-  @apply inline-block;
-  @apply font-semibold;
-  @apply border-b-0;
-  @apply w-6;
-  @apply mr-4;
-}
-
-@utility prose {
-  & ul {
-    @apply list-disc;
-    @apply pl-8;
+    border-color: var(--color-stone-200, currentcolor);
   }
 }
 
@@ -74,25 +32,41 @@
   }
 
   a {
-    @apply text-blue-400;
+    @apply text-blue-500;
     @apply underline;
+    @apply underline-offset-2;
   }
 
   a:hover,
   a:focus {
-    @apply text-yellow-700;
+    @apply text-yellow-600;
   }
 
   code {
     @apply text-sm;
-    @apply rounded-sm;
+    @apply rounded;
+    @apply bg-stone-100;
+    @apply dark:bg-stone-800;
+    @apply px-1;
+    @apply py-0.5;
   }
 
   blockquote {
     @apply border-l-4;
-    @apply border-gray-500;
+    @apply border-stone-300;
+    @apply dark:border-stone-700;
     @apply block;
-    @apply pl-2;
+    @apply pl-4;
+    @apply italic;
+    @apply text-stone-500;
+    @apply dark:text-stone-400;
+  }
+}
+
+@utility prose {
+  & ul {
+    @apply list-disc;
+    @apply pl-6;
   }
 }
 
@@ -113,4 +87,4 @@ a[href].visually-hidden:focus:visited,
 :hover>a[href].visually-hidden,
 :hover>a[href].visually-hidden:visited {
   color: #aaa;
-}     
+}

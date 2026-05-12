@@ -3,11 +3,44 @@ layout: layout.njk
 pageClass: posts
 ---
 
-<article class="prose dark:prose-dark max-w-5xl">
-  <h1 class="border-b-2 border-gray-500 text-2xl font-semibold mt-2">{{ title }}</h1>
-  <time value="{{ entry.date }}" class="block text-lg text-gray-700 mb-4">{{ date | entryDate }}</time>
-  
-  <div class="mb-4 text-lg">
-    {{ content | safe }}
-  </div>
+<article class="prose dark:prose-dark max-w-none">
+  <header class="mb-8 not-prose">
+    <h1 class="text-3xl font-bold text-stone-900 dark:text-stone-100 border-b-0">{{ title }}</h1>
+    <time class="block text-sm font-mono text-stone-400 dark:text-stone-500 mt-2">{{ date | entryDate }}</time>
+    {%- if tags -%}
+    <div class="flex flex-wrap gap-2 mt-3">
+      {%- for tag in tags -%}
+      {%- if tag !== "blogentries" -%}
+      <span class="text-xs px-2 py-0.5 rounded-full bg-stone-100 dark:bg-stone-800 text-stone-500 dark:text-stone-400">{{ tag }}</span>
+      {%- endif -%}
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+  </header>
+
+  {{ content | safe }}
 </article>
+
+{%- if collections.blogentries -%}
+<nav class="mt-12 pt-8 border-t border-stone-200 dark:border-stone-800 not-prose">
+  <div class="flex justify-between gap-4">
+    {%- set prevPost = collections.blogentries | getPreviousCollectionItem %}
+    {%- if prevPost %}
+    <a href="{{ prevPost.url }}" class="group">
+      <span class="block text-xs font-mono text-stone-400 dark:text-stone-500">&larr; Previous</span>
+      <span class="block text-sm font-medium text-stone-700 dark:text-stone-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{{ prevPost.data.title }}</span>
+    </a>
+    {%- else %}
+    <div></div>
+    {%- endif %}
+
+    {%- set nextPost = collections.blogentries | getNextCollectionItem %}
+    {%- if nextPost %}
+    <a href="{{ nextPost.url }}" class="group text-right">
+      <span class="block text-xs font-mono text-stone-400 dark:text-stone-500">Next &rarr;</span>
+      <span class="block text-sm font-medium text-stone-700 dark:text-stone-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{{ nextPost.data.title }}</span>
+    </a>
+    {%- endif %}
+  </div>
+</nav>
+{%- endif %}
