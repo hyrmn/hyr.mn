@@ -7,7 +7,7 @@
     "clean": "rimraf ./dist/",
     "build": "eleventy",
     "build-prod": "cross-env NODE_ENV=production npm run clean && npm run build",
-    "watch": "eleventy --serve --port=8080"
+    "watch": "cross-env CHOKIDAR_USEPOLLING=true eleventy --serve --port=8080"
   },
   "repository": {
     "type": "git",
