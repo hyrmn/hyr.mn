@@ -16,9 +16,7 @@ Not every software product is a good fit for domain driven design. Event Sourcin
 
 Once a business has validated their market fit, started to clarify their core value stream, and is grappling with cross-team coordination, then the topics below will be worth considering.
 
-> Cash Rules Everything Around Me
-
- — Wu-Tang Clan
+{% pullquote "Wu-Tang Clan" %}Cash Rules Everything Around Me{% endpullquote %}
 
 ## Our "Simple" Scenario
 
@@ -42,9 +40,7 @@ We can use some techniques from Domain Driven Design to help bring order and foc
 
 One of the challenges with delivering a solution is understanding the current process. As you talk to key stakeholders, you'll discover that the front desk personnel have separate functions from the group sales team. And, likewise, the housekeeping staff have different tasks than the maintenance team. They'll all have distinct workflows and language. 
 
-> Put Like With Like
-
- — literally every organization book ever
+{% pullquote "literally every organization book ever" %}Put Like With Like{% endpullquote %}
 
 A Bounded Context is a way to group the common things together within a team or function. It's very hard to get it right the first time and you likely will iterate in several sessions with your stakeholders before boundaries crystalize. One tip from Vaughn Vernon is that a Bounded Context is a linguistic boundary. That is, the terms and language within a Bounded Context are consistent.
 
@@ -54,9 +50,7 @@ Drawing these bounded contexts will help you to design the components of the sys
 
 One more tip... odds are very good that the bounded contexts you identify will align with the organizational structure of the business. That's ok.
 
-> Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization's communication structure.
-
- — Melvin E. Conway
+{% pullquote "Melvin E. Conway" %}Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization's communication structure.{% endpullquote %}
 
 ## Ubiquitious Language
 

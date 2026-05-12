@@ -13,6 +13,13 @@ module.exports = function (eleventyConfig) {
     }).toFormat('LLLL d, y');
   });
 
+  eleventyConfig.addPairedShortcode('pullquote', (content, attribution) => {
+    const attributionHtml = attribution
+      ? `<figcaption class="mt-3 text-sm font-medium text-stone-400 dark:text-stone-500">— ${attribution}</figcaption>`
+      : '';
+    return `<figure class="my-8 pl-6"><blockquote class="text-xl font-medium text-stone-800 dark:text-stone-200 not-italic leading-relaxed">${content}</blockquote>${attributionHtml}</figure>`;
+  });
+
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({
     html: true,
