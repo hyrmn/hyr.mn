@@ -4,7 +4,7 @@ date: 2020-05-15
 description: >-
   Learning how to read from the command line and process a file using C#, one bunch of bytes at a time.
 tags:
-  - CSharp
+  - c#
   - Code
   - blogentries
 ---
