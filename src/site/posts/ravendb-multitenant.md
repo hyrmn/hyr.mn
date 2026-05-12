@@ -4,7 +4,7 @@ date: 2016-06-28
 description: >-
   Lessons learned from life with RavenDB 2.5 in production
 tags:
-  - CSharp
+  - c#
   - Code
   - RavenDb
   - blogentries

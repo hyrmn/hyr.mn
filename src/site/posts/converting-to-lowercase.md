@@ -4,7 +4,7 @@ date: 2020-07-06
 description: >-
   How many bad ways can we come up with to do something trivial?
 tags:
-  - CSharp
+  - c#
   - Code
   - blogentries
 ---

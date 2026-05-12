@@ -4,7 +4,7 @@ date: 2019-07-25
 description: >-
   Let's profile some code! And see if we can figure out some great options for things that might matter
 tags:
-  - CSharp
+  - c#
   - Code
   - blogentries
 ---

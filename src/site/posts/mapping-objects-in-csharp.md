@@ -4,7 +4,7 @@ date: 2020-07-01
 description: >-
   How to take data from this object and put it in that object
 tags:
-  - CSharp
+  - c#
   - Code
   - blogentries
 ---

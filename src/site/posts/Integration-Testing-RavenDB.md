@@ -4,7 +4,7 @@ date: 2012-07-23
 description: >-
   Some tips for integration tests with RavenDB; the document database for .NET (plus other languages but we only care about that, right?)
 tags:
-  - CSharp
+  - c#
   - Code
   - RavenDb
   - blogentries

@@ -4,7 +4,7 @@ date: 2021-09-13
 description: >-
   Let's profile some code! This time we'll look at options for number swapping in C#
 tags:
-  - CSharp
+  - c#
   - Code
   - blogentries
 ---

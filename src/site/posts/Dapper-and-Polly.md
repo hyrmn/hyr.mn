@@ -4,7 +4,7 @@ date: 2019-09-03
 description: >-
   Retryable SQL Server exceptions, that lovely little library called Polly, and Dapper (or your favorite database access library)
 tags:
-  - CSharp
+  - c#
   - Code
   - Polly
   - blogentries

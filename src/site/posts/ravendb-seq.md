@@ -4,7 +4,7 @@ date: 2015-01-15
 description: >-
   How to integrate RavenDB server logging into Seq so you can up your visibility game
 tags:
-  - CSharp
+  - c#
   - Code
   - RavenDb
   - blogentries
