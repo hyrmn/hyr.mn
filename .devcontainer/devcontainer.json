@@ -6,6 +6,13 @@
     "ghcr.io/devcontainer-community/devcontainer-features/opencode.ai:1": {},
     "ghcr.io/devcontainer-community/devcontainer-features/lazygit:1": {}
   },
+  "mounts": [
+    {
+      "source": "${localEnv:HOME}/.config/opencode",
+      "target": "/home/node/.config/opencode",
+      "type": "bind"
+    }
+  ],
   "forwardPorts": [8080],
   "portsAttributes": {
     "8080": {
