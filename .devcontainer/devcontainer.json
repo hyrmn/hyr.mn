@@ -8,8 +8,8 @@
   },
   "mounts": [
     {
-      "source": "${localEnv:HOME}/.config/opencode",
-      "target": "/home/node/.config/opencode",
+      "source": "${localEnv:HOME}${localEnv:USERPROFILE}/.secrets",
+      "target": "/var/local/.secrets",
       "type": "bind"
     }
   ],
